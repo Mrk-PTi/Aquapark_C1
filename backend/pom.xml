@@ -4,13 +4,13 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>hu.uni.eku.tzs</groupId>
+  <groupId>AFP 2020</groupId>
   <artifactId>backend</artifactId>
   <version>1.0.21-SNAPSHOT</version>
 
   <name>backend</name>
   <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
+  <url>https://github.com/Mrk-PTi/Aquapark_C1.git</url>
 
   <properties>
     <github.global.server>github</github.global.server>
@@ -32,7 +32,7 @@
     <repository>
       <id>github</id>
       <name>GitHub OWNER Apache Maven Packages</name>
-      <url>https://maven.pkg.github.com/ZsoltToth/project-templates-spring-react</url>
+      <url>https://maven.pkg.github.com/Mrk-PTi/Aquapark_C1</url>
     </repository>
   </distributionManagement>
 
@@ -168,7 +168,7 @@
                 <goal>repackage</goal>
               </goals>
               <configuration>
-                <mainClass>hu.uni.eku.tzs.App</mainClass>
+                <mainClass>AFP 2020 APP</mainClass>
               </configuration>
             </execution>
           </executions>
