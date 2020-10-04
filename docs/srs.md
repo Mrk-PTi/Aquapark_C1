@@ -1,1 +1,2 @@
 # Követelmény specifikáció
+Vágyálom rendszer
