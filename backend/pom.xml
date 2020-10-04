@@ -4,13 +4,13 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>AFP 2020</groupId>
+  <groupId>hu.uni.eku.afpc1</groupId>
   <artifactId>backend</artifactId>
   <version>1.0.21-SNAPSHOT</version>
 
   <name>backend</name>
   <!-- FIXME change it to the project's website -->
-  <url>https://github.com/Mrk-PTi/Aquapark_C1.git</url>
+  <url>https://github.com/Mrk-PTi/Aquapark_C1</url>
 
   <properties>
     <github.global.server>github</github.global.server>
