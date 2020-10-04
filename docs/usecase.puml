@@ -1,0 +1,20 @@
+@startuml
+actor "Guest" as g
+package Aquapark {
+ usecase "Receive ID" as UC1
+ usecase "Slide" as UC2
+ usecase "Pay Charges" as UC3
+ usecase "Use ID" as UC4
+ usecase "Give back ID" as UC5
+ usecase "Receipt" as UC6
+}
+actor "Aquapark" as ap
+UC1 --> g
+g --> UC2
+g --> UC5
+UC2 -> UC4 : include
+UC5 -> UC3 : include
+UC5 -> UC6 : include
+ap --> UC1
+UC5 --> ap
+@enduml
