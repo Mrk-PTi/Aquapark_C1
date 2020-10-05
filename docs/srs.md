@@ -17,7 +17,7 @@ Minden csúszda mellett egy embernek kell állnia, és figyelnie hogy, ki csúsz
  - Nem költséghatékony
  - Időigényes
 
-## Vágyálom rendszer
+## Vízió
  - Új rendszerünkkel elérjük, hogy a vendégek gyorsabban és gördülékenyebben igénybe vehessék a csúszdákat
   Az aquapark dolgozói így átláthatóbb statisztikát készíthetnek, ezáltal az ő munkájuk is könyebb lesz.
   A nap végén egy-egy vendég részletes számlát kap, amelyen szerepel, melyik csúszdát hányszor használta.
