@@ -23,6 +23,16 @@ Minden csúszda mellett egy embernek kell állnia, és figyelnie hogy, ki csúsz
   A nap végén egy-egy vendég részletes számlát kap, amelyen szerepel, melyik csúszdát hányszor használta.
   Ha az aquapark új csúszdákkal bővül, azt szoftveresen is könnyedén rögzíthetjük, rendszerünk rugalmas.
 
+## Funkcionális követelmény
+### Dolgozók számára elérhető funkciók:
+- Vendégek belépésekor és kilépésekor értesítés
+- Vendégenkénti órák adatainak lekérdezése
+- Napi/havi statisztika
+- Vendégenkénti számla előállításának lehetősége
+
+### Vendégek számára elérhető funkciók:
+- Saját csúszási adatok lekérdezése 
+- Jelenlegi költségek lekérdezése
 
 ## Követelmény lista
  - Belépéskor minden egyes vendég számára órát biztosítunk.
