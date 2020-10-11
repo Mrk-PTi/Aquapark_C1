@@ -19,9 +19,9 @@ Minden csúszda mellett egy embernek kell állnia, és figyelnie hogy, ki csúsz
 
 ## Vízió
  - Új rendszerünkkel elérjük, hogy a vendégek gyorsabban és gördülékenyebben igénybe vehessék a csúszdákat
-  Az aquapark dolgozói így átláthatóbb statisztikát készíthetnek, ezáltal az ő munkájuk is könyebb lesz.
-  A nap végén egy-egy vendég részletes számlát kap, amelyen szerepel, melyik csúszdát hányszor használta.
-  Ha az aquapark új csúszdákkal bővül, azt szoftveresen is könnyedén rögzíthetjük, rendszerünk rugalmas.
+ - Az aquapark dolgozói így átláthatóbb statisztikát készíthetnek, ezáltal az ő munkájuk is könyebb lesz
+ - A nap végén egy-egy vendég részletes számlát kap, amelyen szerepel, melyik csúszdát hányszor használta
+ - Ha az aquapark új csúszdákkal bővül, azt szoftveresen is könnyedén rögzíthetjük, rendszerünk rugalmas
 
 ## Funkcionális követelmény
 ### Dolgozók számára elérhető funkciók:
@@ -35,8 +35,13 @@ Minden csúszda mellett egy embernek kell állnia, és figyelnie hogy, ki csúsz
 - Jelenlegi költségek lekérdezése
 
 ## Követelmény lista
- - Belépéskor minden egyes vendég számára órát biztosítunk.
- - Az összes csúszda érzékelőkkel van ellátva.
- - Biztosítjuk, hogy a felhasznált óra egyedi és csakis az adott vendég használja.
- - Az óra adatait leadás után törölni fogjuk.
- - A zárás előtt minden egyes óra vissza kell kerüljön.
+ - Belépéskor minden egyes vendég számára órát biztosítunk
+ - Az összes csúszda érzékelőkkel van ellátva
+ - Biztosítjuk, hogy a felhasznált óra egyedi és csakis az adott vendég használja
+ - Az óra adatait leadás után törölni fogjuk
+ - A zárás előtt minden egyes óra vissza kell kerüljön
+
+# Use Case Diagram részletezése
+ - A vendégek belépéskor kapnak egy órát
+ - Minden csúszásnál használni kell az eszközt, melyet korlátlan mennyiségben tehet meg a vendég
+ - Az aquapark elhagyásakor a vendégnek vissza kell adnia az órát, ekkor kapni fog egy számlát a csúszásairól, amelyet kifizet
