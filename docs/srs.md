@@ -45,3 +45,5 @@ Minden csúszda mellett egy embernek kell állnia, és figyelnie hogy, ki csúsz
  - A vendégek belépéskor kapnak egy órát
  - Minden csúszásnál használni kell az eszközt, melyet korlátlan mennyiségben tehet meg a vendég
  - Az aquapark elhagyásakor a vendégnek vissza kell adnia az órát, ekkor kapni fog egy számlát a csúszásairól, amelyet kifizet
+ 
+ ![UseCase.png]
