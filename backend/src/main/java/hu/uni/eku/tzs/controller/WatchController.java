@@ -1,7 +1,7 @@
-package hu.uni.eku.tzs.controller;
+package hu.uni.eku.afpc1.controller;
 
-import hu.uni.eku.tzs.controller.dto.WatchDTO;
-import hu.uni.eku.tzs.controller.dto.WatchCreateRequestDTO;
+import hu.uni.eku.afpc1.controller.dto.WatchDTO;
+import hu.uni.eku.afpc1.controller.dto.WatchCreateRequestDTO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
