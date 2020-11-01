@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 @Data
 @Builder
 public class GuestDTO {
-    private int user_id;
+    private int guest_id;
     private WatchDTO watch;
     private TransactionDTO transaction;
     private LocalDateTime arrivalDateTime;
