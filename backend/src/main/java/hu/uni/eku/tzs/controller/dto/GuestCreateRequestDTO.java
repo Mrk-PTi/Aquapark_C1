@@ -12,5 +12,5 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 public class GuestCreateRequestDTO {
-    private int user_id;
+    private int guest_id;
 }
