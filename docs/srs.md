@@ -53,8 +53,8 @@ A csúszdák forgalmát is rögzítenie kell az órának, a későbbi napvégi e
 ```
 {
 user_id: int,
-watch_id: uuid,
-transaction_id: uuid,
+watch_id: int,
+transaction_id: int,
 timestamp: dateTime
 }
 ```
@@ -63,8 +63,8 @@ timestamp: dateTime
 ```
 {
 user_id: int,
-watch_id: uuid,
-transaction_id: uuid,
+watch_id: int,
+transaction_id: int,
 slide_id: int,
 timestamp: dateTime
 }
@@ -74,11 +74,11 @@ timestamp: dateTime
 ```
 {
 user_id: int,
-watch_id: uuid,
+watch_id: int,
 slideusage: [
     {
         user_id: int,
-        watch_id: uuid,
+        watch_id: int,
         slide_id: int,
         timestamp: dateTime
     }
@@ -90,7 +90,7 @@ slideusage: [
 ```
 {
 user_id: int,
-watch_id: uuid,
+watch_id: int,
 total_watch: int
 }
 ```
@@ -105,7 +105,7 @@ stat: [
         slide_income: int,
         slideusage: [
             {
-                watch_id: uuid,
+                watch_id: int,
                 slide_id: int,
                 timestamp: dateTime
             }
@@ -117,13 +117,13 @@ stat: [
 #### F6 | Vendég számlájának előállítása
 ```
 {
-    transaction_id: uuid,
+    transaction_id: int,
     receipt_id: int,
     total_expense: int,
     slideusages: [
         {
             user_id: int,
-            watch_id: uuid,
+            watch_id: int,
             slide_id: int,            
             timestamp: dateTime
         }
@@ -135,11 +135,11 @@ stat: [
 ```
 {
 user_id: int,
-watch_id: uuid,
+watch_id: int,
 slideusage: [
      {
         user_id: int,
-        watch_id: uuid,
+        watch_id: int,
         slide_id: int,
         timestamp: dateTime   
      }
@@ -151,12 +151,12 @@ slideusage: [
 ```
 {
 user_id: int,
-watch_id: uuid,
-transaction_id: uuid,
+watch_id: int,
+transaction_id: int,
 slideusage: [
     {
         user_id: int,
-        watch_id: uuid,
+        watch_id: int,
         slide_id: int,
         timestamp: dateTime,
         slide_expense: int
@@ -169,7 +169,7 @@ slideusage: [
 ```
 {
 user_id: int,
-watch_id: uuid
+watch_id: int
 }
 ```
 
