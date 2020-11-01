@@ -49,7 +49,7 @@ A csúszdák forgalmát is rögzítenie kell az órának, a későbbi napvégi e
 
 ## Adatfa
 
-####F1 | Beléptetés
+#### F1 | Beléptetés
 ```
 {
 user_id: int,
@@ -59,7 +59,7 @@ timestamp: dateTime
 }
 ```
 
-####F2 | Csúszdák használata
+#### F2 | Csúszdák használata
 ```
 {
 user_id: int,
@@ -70,7 +70,7 @@ timestamp: dateTime
 }
 ```
 
-####F3 | Vendég adat lekérdezés
+#### F3 | Vendég adat lekérdezés
 ```
 {
 user_id: int,
@@ -86,7 +86,7 @@ slideusage: [
 }
 ```
 
-####F4 | Órák adatainak lekérdezése
+#### F4 | Órák adatainak lekérdezése
 ```
 {
 user_id: int,
@@ -95,7 +95,7 @@ total_watch: int
 }
 ```
 
-####F5 | Napi/havi statisztika lekérdezése
+#### F5 | Napi/havi statisztika lekérdezése
 ```
 {
 total_income: int,
@@ -114,7 +114,7 @@ stat: [
 }
 ```
 
-####F6 | Vendég számlájának előállítása
+#### F6 | Vendég számlájának előállítása
 ```
 {
     transaction_id: uuid,
@@ -131,7 +131,7 @@ stat: [
 }
 ```
 
-####F7 | Saját csúszási adatok lekérdezése
+#### F7 | Saját csúszási adatok lekérdezése
 ```
 {
 user_id: int,
@@ -147,7 +147,7 @@ slideusage: [
 }
 ```
 
-####F8 | Jelenlegi költségek lekérdezése
+#### F8 | Jelenlegi költségek lekérdezése
 ```
 {
 user_id: int,
@@ -165,7 +165,7 @@ slideusage: [
 }
 ```
 
-####F9 | Kiléptetés
+#### F9 | Kiléptetés
 ```
 {
 user_id: int,
