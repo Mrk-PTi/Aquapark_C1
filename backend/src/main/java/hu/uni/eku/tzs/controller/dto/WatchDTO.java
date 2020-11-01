@@ -7,6 +7,6 @@ import lombok.Data;
 @Builder
 public class WatchDTO {
 
-    private string watchId;
+    private int watchId;
 
 }
