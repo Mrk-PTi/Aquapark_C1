@@ -52,7 +52,7 @@ A csúszdák forgalmát is rögzítenie kell az órának, a későbbi napvégi e
 #### F1 | Beléptetés
 ```
 {
-user_id: int,
+guest_id: int,
 watch_id: int,
 transaction_id: int,
 timestamp: dateTime
@@ -62,7 +62,7 @@ timestamp: dateTime
 #### F2 | Csúszdák használata
 ```
 {
-user_id: int,
+guest_id: int,
 watch_id: int,
 transaction_id: int,
 slide_id: int,
@@ -73,11 +73,11 @@ timestamp: dateTime
 #### F3 | Vendég adat lekérdezés
 ```
 {
-user_id: int,
+guest_id: int,
 watch_id: int,
 slideusage: [
     {
-        user_id: int,
+        guest_id: int,
         watch_id: int,
         slide_id: int,
         timestamp: dateTime
@@ -89,7 +89,7 @@ slideusage: [
 #### F4 | Órák adatainak lekérdezése
 ```
 {
-user_id: int,
+guest_id: int,
 watch_id: int,
 total_watch: int
 }
@@ -122,7 +122,7 @@ stat: [
     total_expense: int,
     slideusages: [
         {
-            user_id: int,
+            guest_id: int,
             watch_id: int,
             slide_id: int,            
             timestamp: dateTime
@@ -134,11 +134,11 @@ stat: [
 #### F7 | Saját csúszási adatok lekérdezése
 ```
 {
-user_id: int,
+guest_id: int,
 watch_id: int,
 slideusage: [
      {
-        user_id: int,
+        guest_id: int,
         watch_id: int,
         slide_id: int,
         timestamp: dateTime   
@@ -150,12 +150,12 @@ slideusage: [
 #### F8 | Jelenlegi költségek lekérdezése
 ```
 {
-user_id: int,
+guest_id: int,
 watch_id: int,
 transaction_id: int,
 slideusage: [
     {
-        user_id: int,
+        guest_id: int,
         watch_id: int,
         slide_id: int,
         timestamp: dateTime,
@@ -168,7 +168,7 @@ slideusage: [
 #### F9 | Kiléptetés
 ```
 {
-user_id: int,
+guest_id: int,
 watch_id: int
 }
 ```
