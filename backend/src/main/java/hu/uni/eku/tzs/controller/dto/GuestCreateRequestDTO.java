@@ -1,4 +1,4 @@
-package hu.uni.eku.tzs.controller.dto;
+package hu.uni.eku.afpc1.controller.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,5 +12,5 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 public class GuestCreateRequestDTO {
-    private int guestID;
+    private int user_id;
 }
