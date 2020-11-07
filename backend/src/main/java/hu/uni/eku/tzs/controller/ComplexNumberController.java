@@ -1,10 +1,10 @@
-package hu.uni.eku.tzs.controller;
+package hu.uni.eku.afpc1.controller;
 
-import hu.uni.eku.tzs.controller.dto.ComplexNumberDto;
-import hu.uni.eku.tzs.controller.dto.ComplexNumberRecordRequestDto;
-import hu.uni.eku.tzs.model.ComplexNumber;
-import hu.uni.eku.tzs.service.ComplexNumberService;
-import hu.uni.eku.tzs.service.exceptions.ComplexNumberAlreadyExistsException;
+import hu.uni.eku.afpc1.controller.dto.ComplexNumberDto;
+import hu.uni.eku.afpc1.controller.dto.ComplexNumberRecordRequestDto;
+import hu.uni.eku.afpc1.model.ComplexNumber;
+import hu.uni.eku.afpc1.service.ComplexNumberService;
+import hu.uni.eku.afpc1.service.exceptions.ComplexNumberAlreadyExistsException;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;

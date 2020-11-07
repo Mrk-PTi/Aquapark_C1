@@ -1,4 +1,4 @@
-package hu.uni.eku.tzs.dao.entity;
+package hu.uni.eku.afpc1.dao.entity;
 
 import lombok.*;
 import org.hibernate.annotations.Generated;

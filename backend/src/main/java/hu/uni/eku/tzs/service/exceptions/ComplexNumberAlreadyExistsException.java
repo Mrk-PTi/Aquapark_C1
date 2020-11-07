@@ -1,4 +1,4 @@
-package hu.uni.eku.tzs.service.exceptions;
+package hu.uni.eku.afpc1.service.exceptions;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;

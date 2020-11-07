@@ -1,4 +1,4 @@
-package hu.uni.eku.tzs.controller.dto;
+package hu.uni.eku.afpc1.controller.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

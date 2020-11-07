@@ -1,6 +1,6 @@
-package hu.uni.eku.tzs.dao;
+package hu.uni.eku.afpc1.dao;
 
-import hu.uni.eku.tzs.dao.entity.ComplexNumber;
+import hu.uni.eku.afpc1.dao.entity.ComplexNumber;
 import org.springframework.data.repository.CrudRepository;
 
 public interface ComplexNumberRepository extends CrudRepository<ComplexNumber, Integer> {

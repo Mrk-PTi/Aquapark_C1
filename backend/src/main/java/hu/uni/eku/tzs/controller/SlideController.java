@@ -1,6 +1,6 @@
-package hu.uni.eku.tzs.controller;
-import hu.uni.eku.tzs.controller.dto.SlideDTO;
-import hu.uni.eku.tzs.controller.dto.SlideCreateRequestDTO;
+package hu.uni.eku.afpc1.controller;
+import hu.uni.eku.afpc1.controller.dto.SlideDTO;
+import hu.uni.eku.afpc1.controller.dto.SlideCreateRequestDTO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -26,7 +26,7 @@ public class SlideController {
     @ApiOperation(value = "Record")
     public void record(
             @RequestBody
-            SlideRecordRequestDto request
+            SlideRecordRequestDTO request
     ){
         log.info("Recording of Slide {}",request.getSlide());
     }
@@ -34,7 +34,7 @@ public class SlideController {
     @GetMapping(value = {"/"}, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     @ApiOperation(value= "Query Slide")
-    public Collection<SlideDto> query(){
+    public Collection<SlideDTO> query(){
         return service.readAll().stream().map(model ->
                 SlideDto.builder()
                 .slide(model.getSlide())
