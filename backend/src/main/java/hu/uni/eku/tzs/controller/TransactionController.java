@@ -28,7 +28,7 @@ public class TransactionController {
     public void transaction(
             @RequestBody
             TransactionRequestDTO request
-    )
+    );
 
     @GetMapping(value = {"/"}, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
