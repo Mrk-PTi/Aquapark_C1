@@ -43,8 +43,3 @@ public class GuestController {
         ).collect(Collectors.toList());
     }
 }
-
-
-
-
-
