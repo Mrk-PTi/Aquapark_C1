@@ -7,5 +7,5 @@ import lombok.Data;
 @Builder
 public class WatchDTO {
 
-    private int watchId;
+    private int watch_id;
 }
