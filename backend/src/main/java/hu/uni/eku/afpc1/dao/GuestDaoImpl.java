@@ -30,27 +30,25 @@ public class GuestDaoImpl implements GuestDao {
 
     @Override
     public void update(Guest original, Guest updated) {
-
+        hu.uni.eku.afpc1.dao.entity.Guest toUpdate = repository.findById(original.getId());
+        toUpdate.setGuestId(updated.getGuestId());
+        repository.save(toUpdate);
     }
 
     @Override
     public void delete(Guest guest) {
-
+        repository.deleteById(guestToDelete.getId());
     }
 
     private static class GuestEntityModelConverter{
 
         private static Guest entity2model(hu.uni.eku.afpc1.dao.entity.Guest entity){
-            return new Guest(
-                    entity.getRealPart(),
-                    entity.getImaginaryPart()
-            );
+            return new Guest(entity.getGuestId());
         }
 
         private static hu.uni.eku.afpc1.dao.entity.Guest model2entity(Guest model){
             return hu.uni.eku.afpc1.dao.entity.Guest.builder()
-                    .realPart(model.getReal())
-                    .imaginaryPart(model.getImaginary())
+                    .guest_id(model.getGuestId())
                     .build();
         }
 

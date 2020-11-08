@@ -12,5 +12,5 @@ public interface GuestDao {
 
     void update(Guest original, Guest updated);
 
-    void delete(Guest guest);
+    void delete(guestToDelete);
 }
