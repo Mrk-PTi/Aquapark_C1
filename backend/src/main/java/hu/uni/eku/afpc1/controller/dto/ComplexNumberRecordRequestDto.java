@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ComplexNumberRecordRequestDTO {
+public class ComplexNumberRecordRequestDto {
 
     private double real;
     private double imag;
