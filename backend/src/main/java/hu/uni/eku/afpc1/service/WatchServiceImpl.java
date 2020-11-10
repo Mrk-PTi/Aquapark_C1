@@ -20,7 +20,7 @@ public class WatchServiceImpl implements WatchService {
     public void record(Watch watch) throws WatchAlreadyExistsException {
         final boolean isAlreadyRecorded = dao.readAll()
                 .stream()
-                .anyMatch( w -> w.getwatch_id() == watch.getwatch_id());
+                .anyMatch( w -> w.getWatch_id() == watch.getWatch_id());
         if(isAlreadyRecorded){
             log.info("Watch {} is already recorded!", watch);
             throw new WatchAlreadyExistsException(String.format("Watch (%s) already exists!", watch.toString()));

@@ -4,13 +4,13 @@ import hu.uni.eku.afpc1.model.Watch;
 
 import java.util.Collection;
 
-public interface Watch {
+public interface WatchDao {
 
     void create(Watch watch);
 
     Collection<Watch> readAll();
 
-    void update(Watch original, Watch updated);
+    void update(int watch_id, Watch updated);
 
-    void delete(Watch watch);
+    void delete(int watch_id);
 }

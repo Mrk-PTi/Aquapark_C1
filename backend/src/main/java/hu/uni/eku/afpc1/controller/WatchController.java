@@ -7,7 +7,6 @@ import hu.uni.eku.afpc1.service.WatchService;
 import hu.uni.eku.afpc1.service.exceptions.WatchAlreadyExistsException;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -33,11 +32,11 @@ public class WatchController {
             @RequestBody
             WatchCreateRequestDTO request
     ){
-        log.info("Recording of Watch ({})",request.getwatch_id());
+        log.info("Recording of Watch ({})",request.getWatch_id());
         try {
-            service.record(new Watch(request.getwatch_id()));
+            service.record(new Watch(request.getWatch_id()));
         } catch (WatchAlreadyExistsException e) {
-            log.info("Watch ({}) is already exists! Message: {}", request.getwatch_id(), e.getMessage());
+            log.info("Watch ({}) is already exists! Message: {}", request.getWatch_id(), e.getMessage());
             throw new ResponseStatusException(
                     HttpStatus.CONFLICT,
                     e.getMessage()
@@ -51,7 +50,7 @@ public class WatchController {
     public Collection<WatchDTO> query(){
         return service.readAll().stream().map(model ->
                 WatchDTO.builder()
-                .watch_id(model.getwatch_id())
+                .watch_id(model.getWatch_id())
                 .build()
         ).collect(Collectors.toList());
     }
