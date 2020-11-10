@@ -1,8 +1,10 @@
 package hu.uni.eku.afpc1.controller;
 
-import hu.uni.eku.afpc1.controller.controller.dto.SlideCreateRequestDTO;
-import hu.uni.eku.afpc1.controller.controller.dto.SlideDTO;
-import hu.uni.eku.afpc1.controller.controller.dto.WatchDTO;
+import hu.uni.eku.afpc1.controller.dto.SlideDTO;
+import hu.uni.eku.afpc1.controller.dto.SlideCreateRequestDTO;
+import hu.uni.eku.afpc1.model.Slide;
+import hu.uni.eku.afpc1.service.SlideService;
+import hu.uni.eku.afpc1.service.exceptions.SlideAlreadyExistsException;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
@@ -12,75 +14,46 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping(value = "/slide")
+@RequestMapping(value = "/Slide")
 @RequiredArgsConstructor
-@Api(tags = "Slide")
+@Api(tags = "Slides")
+@Slf4j
 public class SlideController {
-    private Collection<SlideDTO> slides = new ArrayList<>();
+
+    private final SlideService service;
+
+    @PostMapping("/record")
+    @ApiOperation(value = "Record")
+    public void record(
+            @RequestBody
+                    SlideCreateRequestDTO request
+    ){
+        log.info("Recording of Slide ({},{})",request.getSlide_id(), request.getSlide_expenses());
+        try {
+            service.record(new Slide(request.getSlide_id(), request.getSlide_expenses()));
+        } catch (SlideAlreadyExistsException e) {
+            log.info("Slide ({},{}) is already exists! Message: {}", request.getSlide_id(), request.getSlide_expenses(), e.getMessage());
+            throw new ResponseStatusException(
+                    HttpStatus.CONFLICT,
+                    e.getMessage()
+            );
+        }
+    }
 
     @GetMapping(value = {"/"}, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    @ApiOperation(value = "Fetch all slide")
-    public Collection<SlideDTO> readAll() {
-        return slides.stream().map(slide ->
-                SlideDto.builder()
-                        .slideId(slide.getSlideId())
-                        .name(slide.getName())
-                        .price(slide.getPrice())
+    @ApiOperation(value= "Query Slides")
+    public Collection<SlideDTO> query(){
+        return service.readAll().stream().map(model ->
+                SlideDTO.builder()
+                        .slide_id(model.getSlide_id())
+                        .slide_expense(model.getSlide_expense())
                         .build()
         ).collect(Collectors.toList());
     }
 
-    @GetMapping(value = {"/{id}"}, produces = MediaType.APPLICATION_JSON_VALUE)
-    @ResponseBody
-    @ApiOperation(value = "Fetch slide by ID")
-    public SlideDto fetchById(@PathVariable String id) {
-        for(SlideDto slide: slides) {
-            if(slide.getSlideId().equals(id)) {
-                return SlideDto.builder()
-                        .slideId(slide.getSlideId())
-                        .name(slide.getName())
-                        .price(slide.getPrice())
-                        .build();
-            }
-        }
-
-        throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "No slide found by the given ID!");
-    }
-
-    @PostMapping(value = {"/create"})
-    @ApiOperation(value = "Create a slide")
-    public void create(@RequestBody SlideCreateRequestDTO request) {
-        SlideDto newSlide = SlideDTO.builder()
-                .slideId(int.randomint().toString())
-                .name(request.getName())
-                .price(request.getPrice())
-                .build();
-        slides.add(newSlide);
-    }
-
-    @PutMapping(value = {"/{id}"})
-    @ApiOperation(value = "Update a slide")
-    public void update(@PathVariable String id, @RequestBody SlideCreateRequestDto request) {
-        slides = slides.stream().map(
-                slide -> slide.getSlideId().equals(id)
-                        ? SlideDto.builder()
-                        .slideId(slide.getSlideId())
-                        .name(request.getName())
-                        .price(request.getPrice())
-                        .build()
-                        : slide
-        ).collect(Collectors.toList());
-    }
-
-    @DeleteMapping(value = {"/{id}"})
-    @ApiOperation(value = "Delete a slide")
-    public void delete(@PathVariable String id) {
-        slides.removeIf(slide -> slide.getSlideId().equals(id));
-    }
 }
