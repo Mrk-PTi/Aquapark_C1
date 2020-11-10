@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class WatchCreateRequestDto {
+public class WatchCreateRequestDTO {
 
-    private int watchId;
+    private int watch_id;
 }
