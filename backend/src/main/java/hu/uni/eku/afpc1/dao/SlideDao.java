@@ -10,7 +10,7 @@ public interface SlideDao {
 
     Collection<Slide> readAll();
 
-    void update(Slide original, Slide updated);
+    void update(int slide_id, Slide updated);
 
-    void delete(Slide slide);
+    void delete(int slide_id);
 }

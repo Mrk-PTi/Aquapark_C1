@@ -7,10 +7,9 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ComplexNumber {
+public class Slide {
 
-    private String slideId;
-    private String name;
-    private double price;
+    private int slide_id;
+    private int slide_expense;
 
 }

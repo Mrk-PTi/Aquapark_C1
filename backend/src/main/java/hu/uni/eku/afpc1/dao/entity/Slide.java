@@ -15,10 +15,9 @@ public class Slide {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Coloumn
-    private String slideId;
-    @Coloumn
-    private String name;
-    @Coloumn
-    private double price;
+    private int Id;
+    @Column
+    private int slide_id;
+    @Column
+    private int slide_expenses;
 }

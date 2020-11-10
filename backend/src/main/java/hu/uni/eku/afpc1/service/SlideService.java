@@ -5,7 +5,7 @@ import hu.uni.eku.afpc1.service.exceptions.SlideAlreadyExistsException;
 
 import java.util.Collection;
 
-public interface Slide {
+public interface SlideService {
 
     void record(Slide slide) throws SlideAlreadyExistsException;
 
