@@ -10,5 +10,5 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class TransactionRequestDTO {
-    private int transactionId;
+    private int transaction_id;
 }

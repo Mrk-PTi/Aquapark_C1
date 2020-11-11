@@ -6,5 +6,6 @@ import lombok.Data;
 @Data
 @Builder
 public class TransactionDTO {
-    private int transactionId;
+
+    private int transaction_id;
 }
