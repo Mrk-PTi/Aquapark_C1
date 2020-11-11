@@ -4,6 +4,7 @@ import lombok.*;
 import org.hibernate.annotations.Generated;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Entity
 @Builder
@@ -16,10 +17,10 @@ public class Guest {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int guest_id;
-    @Column
-    private Watch watch;
-    @Column
-    private Transaction transaction;
+    //@Column
+    //private Watch watch;
+    //@Column
+    //private Pay pay;
     @Column
     private LocalDateTime arrivalDateTime;
 }

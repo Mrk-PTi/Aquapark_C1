@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 @Builder
 public class GuestDTO {
     private int guest_id;
-    private WatchDTO watch;
-    private TransactionDTO transaction;
+    //private WatchDTO watch;
+    //private PayDTO transaction;
     private LocalDateTime arrivalDateTime;
 }

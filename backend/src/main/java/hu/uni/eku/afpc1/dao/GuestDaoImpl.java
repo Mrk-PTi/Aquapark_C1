@@ -5,8 +5,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
-import java.util.Spliterator;
-import java.util.Spliterators;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
@@ -29,26 +27,29 @@ public class GuestDaoImpl implements GuestDao {
     }
 
     @Override
-    public void update(Guest original, Guest updated) {
-        hu.uni.eku.afpc1.dao.entity.Guest toUpdate = repository.findById(original.getId());
-        toUpdate.setGuestId(updated.getGuestId());
-        repository.save(toUpdate);
+    public void update(int guest_id, Guest updated) {
+        hu.uni.eku.afpc1.dao.entity.Guest temp = repository.findByGuest_id(guest_id);
+        temp.setGuest_id(updated.getGuest_id());
+        repository.save(temp);
     }
 
     @Override
-    public void delete(Guest guest) {
-        repository.deleteById(guestToDelete.getId());
+    public void delete(int guest_id) {
+        hu.uni.eku.afpc1.dao.entity.Guest temp = repository.findByGuest_id(guest_id);
+        if(temp != null)
+            repository.delete(temp);
     }
 
     private static class GuestEntityModelConverter{
 
         private static Guest entity2model(hu.uni.eku.afpc1.dao.entity.Guest entity){
-            return new Guest(entity.getGuestId());
+            return new Guest(entity.getGuest_id(), entity.getArrivalDateTime());
         }
 
         private static hu.uni.eku.afpc1.dao.entity.Guest model2entity(Guest model){
             return hu.uni.eku.afpc1.dao.entity.Guest.builder()
-                    .guest_id(model.getGuestId())
+                    .guest_id(model.getGuest_id())
+                    .arrivalDateTime(model.getArrivalDateTime())
                     .build();
         }
 

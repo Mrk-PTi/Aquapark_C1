@@ -21,9 +21,9 @@ public class GuestServiceImpl implements GuestService {
         final boolean isAlreadyRecorded = dao.readAll()
                 .stream()
                 .anyMatch( g ->
-                        g.getReal() == guest.getReal()
+                        g.getGuest_id() == guest.getGuest_id()
                                 &&
-                                g.getImaginary() == guest.getImaginary());
+                                g.getArrivalDateTime() == guest.getArrivalDateTime());
         if(isAlreadyRecorded){
             log.info("Guest {} is already recorded!", guest);
             throw new GuestAlreadyExistsException(String.format("Guest (%s) already exists!", guest.toString()));

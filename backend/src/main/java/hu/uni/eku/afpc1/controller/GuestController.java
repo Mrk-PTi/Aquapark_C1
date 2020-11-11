@@ -1,7 +1,7 @@
 package hu.uni.eku.afpc1.controller;
 
 import hu.uni.eku.afpc1.controller.dto.GuestDTO;
-import hu.uni.eku.afpc1.controller.dto.GuestCreateRequestDto;
+import hu.uni.eku.afpc1.controller.dto.GuestCreateRequestDTO;
 import hu.uni.eku.afpc1.model.Guest;
 import hu.uni.eku.afpc1.service.GuestService;
 import hu.uni.eku.afpc1.service.exceptions.GuestAlreadyExistsException;
@@ -33,11 +33,11 @@ public class GuestController {
             @RequestBody
                     GuestCreateRequestDTO request
     ){
-        log.info("Recording of Guests ({},{})",request.getGuestId());
+        log.info("Recording of Guests ({},{})",request.getGuest_id(),request.getArrivalDateTime());
         try {
-            service.record(new Guest(request.getGuestId()));
+            service.record(new Guest(request.getGuest_id(),request.getArrivalDateTime()));
         } catch (GuestAlreadyExistsException e) {
-            log.info("Guest ({},{}) is already exists! Message: {}", request.getGuestId(), e.getMessage());
+            log.info("Guest ({},{}) already exists! Message: {}", request.getGuest_id(), request.getArrivalDateTime(), e.getMessage());
             throw new ResponseStatusException(
                     HttpStatus.CONFLICT,
                     e.getMessage()
@@ -51,7 +51,8 @@ public class GuestController {
     public Collection<GuestDTO> query(){
         return service.readAll().stream().map(model ->
                 GuestDTO.builder()
-                        .guest_id(model.getGuestId())
+                        .guest_id(model.getGuest_id())
+                        .arrivalDateTime(model.getArrivalDateTime())
                         .build()
         ).collect(Collectors.toList());
     }

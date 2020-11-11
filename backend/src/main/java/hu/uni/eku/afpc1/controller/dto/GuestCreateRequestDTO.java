@@ -5,7 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.UUID;
+import java.time.LocalDateTime;
 
 @Data
 @Builder
@@ -13,4 +13,5 @@ import java.util.UUID;
 @AllArgsConstructor
 public class GuestCreateRequestDTO {
     private int guest_id;
+    private LocalDateTime arrivalDateTime;
 }
