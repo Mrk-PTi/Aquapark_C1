@@ -7,8 +7,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Transaction {
+public class Pay{
 
-    private int transaction_id;
+    private int pay_id;
 
 }

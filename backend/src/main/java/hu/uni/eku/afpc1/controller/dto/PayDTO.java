@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 @Builder
-public class TransactionDTO {
+public class PayDTO {
 
-    private int transaction_id;
+    private int pay_id;
 }

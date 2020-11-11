@@ -9,6 +9,6 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class TransactionRequestDTO {
-    private int transaction_id;
+public class PayRequestDTO {
+    private int pay_id;
 }

@@ -11,11 +11,11 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Transaction {
+public class Pay {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int Id;
     @Column
-    private int transaction_id;
+    private int pay_id;
 }
