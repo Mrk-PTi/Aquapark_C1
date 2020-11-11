@@ -35,9 +35,9 @@ public class WatchDaoImpl implements WatchDao {
 
     @Override
     public void delete(int watch_id) {
-        hu.uni.eku.afpc1.dao.entity.Watch result = repository.findByWatch_id(watch_id);
-        if(result != null)
-            repository.delete(result);
+        hu.uni.eku.afpc1.dao.entity.Watch temp = repository.findByWatch_id(watch_id);
+        if(temp != null)
+            repository.delete(temp);
     }
 
     private static class WatchEntityModelConverter{
