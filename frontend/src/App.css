@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+body {
+    margin: 0px;
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    background: aquamarine;
+    overflow: hidden;
+}
+video{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+h1{
+    padding: 10px;
+}
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+#content{
+    position: fixed;
+    right: 40%;
+    width: 20%;
+    text-align: center;
+    margin-top: 200px;
+    padding: 10px;
+    background-color: #f1f1f1;
+}
+
+.header {
+    position: fixed;
+    background-color: #f1f1f1;
+    padding: 10px;
+    width: 96%;
+    right: 2%;
+    top: 5px;
+    border-radius: 24px;
+}
+
+.header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+.header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.header a:hover {
+    background-color: aquamarine;
+    color: black;
+}
+
+.header-right {
+    float: right;
+}
+
+button {
+    border: none;
+    color: black;
+    padding: 5px;
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+    background: aquamarine;
+    border-radius: 24px;
+}
+
+footer{
+    width: 96%;
+    right: 2%;
+    background-color: #f1f1f1;
+    padding-top: 10px;
+    position: fixed;
+    bottom: 5px;
+    text-align: center;
+    border-radius: 24px;
+}
+
+input[type=number] {
+    border-radius: 24px;
+    background: aquamarine;
+}
+
+.round{
+    border-radius: 24px;
+}
