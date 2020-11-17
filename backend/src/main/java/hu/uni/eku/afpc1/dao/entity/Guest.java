@@ -16,11 +16,9 @@ public class Guest {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int guest_id;
-    //@Column
-    //private Watch watch;
-    //@Column
-    //private Pay pay;
+    private int Id;
+    @Column
+    private Integer guestId;
     @Column
     private LocalDateTime arrivalDateTime;
 }

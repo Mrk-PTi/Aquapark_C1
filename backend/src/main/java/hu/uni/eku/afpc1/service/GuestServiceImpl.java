@@ -21,7 +21,7 @@ public class GuestServiceImpl implements GuestService {
         final boolean isAlreadyRecorded = dao.readAll()
                 .stream()
                 .anyMatch( g ->
-                        g.getGuest_id() == guest.getGuest_id()
+                        g.getGuestId() == guest.getGuestId()
                                 &&
                                 g.getArrivalDateTime() == guest.getArrivalDateTime());
         if(isAlreadyRecorded){

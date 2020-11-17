@@ -17,5 +17,5 @@ public class Pay {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int Id;
     @Column
-    private int pay_id;
+    private Integer payId;
 }

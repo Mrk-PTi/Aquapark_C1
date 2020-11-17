@@ -32,11 +32,11 @@ public class PayController {
             @RequestBody
             PayRequestDTO request
     ){
-        log.info("Recording of Pay ({})",request.getPay_id());
+        log.info("Recording of Pay ({})",request.getPayId());
         try {
-            service.record(new Pay(request.getPay_id()));
+            service.record(new Pay(request.getPayId()));
         } catch (PayAlreadyExistsException e) {
-            log.info("Pay ({}) is already exists! Message: {}", request.getPay_id(), e.getMessage());
+            log.info("Pay ({}) is already exists! Message: {}", request.getPayId(), e.getMessage());
             throw new ResponseStatusException(
                     HttpStatus.CONFLICT,
                     e.getMessage()
@@ -50,7 +50,7 @@ public class PayController {
     public Collection<PayDTO> query(){
         return service.readAll().stream().map(model ->
                 PayDTO.builder()
-                .pay_id(model.getPay_id())
+                .payId(model.getPayId())
                 .build()
         ).collect(Collectors.toList());
     }

@@ -10,6 +10,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class SlideCreateRequestDTO {
-    private int slide_id;
-    private int slide_expenses;
+    private Integer slideId;
+    private Integer slideExpenses;
 }

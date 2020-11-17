@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Slide {
 
-    private int slide_id;
-    private int slide_expense;
+    private Integer slideId;
+    private Integer slideExpense;
 
 }

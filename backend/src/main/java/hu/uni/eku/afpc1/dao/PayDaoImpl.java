@@ -27,15 +27,15 @@ public class PayDaoImpl implements PayDao {
     }
 
     @Override
-    public void update(int pay_id, Pay updated) {
-        hu.uni.eku.afpc1.dao.entity.Pay temp = repository.findByPay_id(pay_id);
-        temp.setPay_id(updated.getPay_id());
+    public void update(Integer payId, Pay updated) {
+        hu.uni.eku.afpc1.dao.entity.Pay temp = repository.findByPayId(payId);
+        temp.setPayId(updated.getPayId());
         repository.save(temp);
     }
 
     @Override
-    public void delete(int pay_id) {
-        hu.uni.eku.afpc1.dao.entity.Pay temp = repository.findByPay_id(pay_id);
+    public void delete(Integer payId) {
+        hu.uni.eku.afpc1.dao.entity.Pay temp = repository.findByPayId(payId);
         if(temp != null)
             repository.delete(temp);
     }
@@ -43,12 +43,12 @@ public class PayDaoImpl implements PayDao {
     private static class PayEntityModelConverter{
 
         private static Pay entity2model(hu.uni.eku.afpc1.dao.entity.Pay entity){
-            return new Pay(entity.getPay_id());
+            return new Pay(entity.getPayId());
         }
 
         private static hu.uni.eku.afpc1.dao.entity.Pay model2entity(Pay model){
             return hu.uni.eku.afpc1.dao.entity.Pay.builder()
-                    .pay_id(model.getPay_id())
+                    .payId(model.getPayId())
                     .build();
         }
 

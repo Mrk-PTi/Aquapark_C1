@@ -17,5 +17,5 @@ public class Watch {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int Id;
     @Column
-    private int watch_id;
+    private Integer watchId;
 }

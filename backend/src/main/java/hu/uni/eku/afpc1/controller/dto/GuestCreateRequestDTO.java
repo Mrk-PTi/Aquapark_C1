@@ -12,6 +12,6 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 public class GuestCreateRequestDTO {
-    private int guest_id;
+    private Integer guestId;
     private LocalDateTime arrivalDateTime;
 }

@@ -33,11 +33,11 @@ public class GuestController {
             @RequestBody
                     GuestCreateRequestDTO request
     ){
-        log.info("Recording of Guests ({},{})",request.getGuest_id(),request.getArrivalDateTime());
+        log.info("Recording of Guests ({},{})",request.getGuestId(),request.getArrivalDateTime());
         try {
-            service.record(new Guest(request.getGuest_id(),request.getArrivalDateTime()));
+            service.record(new Guest(request.getGuestId(),request.getArrivalDateTime()));
         } catch (GuestAlreadyExistsException e) {
-            log.info("Guest ({},{}) already exists! Message: {}", request.getGuest_id(), request.getArrivalDateTime(), e.getMessage());
+            log.info("Guest ({},{}) already exists! Message: {}", request.getGuestId(), request.getArrivalDateTime(), e.getMessage());
             throw new ResponseStatusException(
                     HttpStatus.CONFLICT,
                     e.getMessage()
@@ -51,7 +51,7 @@ public class GuestController {
     public Collection<GuestDTO> query(){
         return service.readAll().stream().map(model ->
                 GuestDTO.builder()
-                        .guest_id(model.getGuest_id())
+                        .guestId(model.getGuestId())
                         .arrivalDateTime(model.getArrivalDateTime())
                         .build()
         ).collect(Collectors.toList());
