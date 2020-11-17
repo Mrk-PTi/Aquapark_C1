@@ -10,5 +10,6 @@ import lombok.NoArgsConstructor;
 public class Pay{
 
     private Integer payId;
+    private Integer expense;
 
 }

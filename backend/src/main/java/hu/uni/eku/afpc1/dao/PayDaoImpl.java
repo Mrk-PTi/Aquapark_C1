@@ -30,6 +30,7 @@ public class PayDaoImpl implements PayDao {
     public void update(Integer payId, Pay updated) {
         hu.uni.eku.afpc1.dao.entity.Pay temp = repository.findByPayId(payId);
         temp.setPayId(updated.getPayId());
+        temp.setExpense(updated.getExpense());
         repository.save(temp);
     }
 
@@ -43,12 +44,13 @@ public class PayDaoImpl implements PayDao {
     private static class PayEntityModelConverter{
 
         private static Pay entity2model(hu.uni.eku.afpc1.dao.entity.Pay entity){
-            return new Pay(entity.getPayId());
+            return new Pay(entity.getPayId(),entity.getExpense());
         }
 
         private static hu.uni.eku.afpc1.dao.entity.Pay model2entity(Pay model){
             return hu.uni.eku.afpc1.dao.entity.Pay.builder()
                     .payId(model.getPayId())
+                    .expense(model.getExpense())
                     .build();
         }
 

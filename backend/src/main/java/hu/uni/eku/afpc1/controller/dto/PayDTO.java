@@ -8,4 +8,5 @@ import lombok.Data;
 public class PayDTO {
 
     private Integer payId;
+    private Integer expense;
 }

@@ -1,7 +1,6 @@
 package hu.uni.eku.afpc1.dao.entity;
 
 import lombok.*;
-import org.hibernate.annotations.Generated;
 
 import javax.persistence.*;
 
@@ -18,4 +17,6 @@ public class Pay {
     private int Id;
     @Column
     private Integer payId;
+    @Column
+    private Integer expense;
 }
