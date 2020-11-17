@@ -18,7 +18,11 @@ public class Guest {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int Id;
     @Column
-    private Integer guestId;
+    private String guestName;
+    @Column
+    private Integer watchId;
+    @Column
+    private Integer payId;
     @Column
     private LocalDateTime arrivalDateTime;
 }

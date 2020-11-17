@@ -8,6 +8,8 @@ import java.time.LocalDateTime;
 @Data
 @Builder
 public class GuestDTO {
-    private Integer guestId;
+    private String guestName;
+    private Integer watchId;
+    private Integer payId;
     private LocalDateTime arrivalDateTime;
 }
