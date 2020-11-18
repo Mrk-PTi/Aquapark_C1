@@ -19,7 +19,6 @@ A csúszdák forgalmát is rögzítenie kell az órának, a későbbi napvégi e
 
 ## Vízió
  - Új rendszerünkkel elérjük, hogy a vendégek gyorsabban és gördülékenyebben igénybe vehessék a csúszdákat
- - Az aquapark dolgozói így átláthatóbb statisztikát készíthetnek, ezáltal az ő munkájuk is könyebb lesz
  - A nap végén egy-egy vendég részletes számlát kap, amelyen szerepel, melyik csúszdát hányszor használta
  - Ha az aquapark új csúszdákkal bővül, azt szoftveresen is könnyedén rögzíthetjük, rendszerünk rugalmas
 
@@ -28,11 +27,9 @@ A csúszdák forgalmát is rögzítenie kell az órának, a későbbi napvégi e
 - Vendégek beléptetése és kiléptetése
 - Vendég adatainak lekérdezése
 - Órák adatainak lekérdezése
-- Napi/havi statisztika
 - Vendégenkénti számla előállításának lehetősége
 
-### Vendégek számára elérhető funkciók:
-- Saját csúszási adatok lekérdezése 
+### Vendégek számára elérhető funkciók: 
 - Jelenlegi költségek lekérdezése
 
 | ID  | Funkció | Leírás |
@@ -40,136 +37,62 @@ A csúszdák forgalmát is rögzítenie kell az órának, a későbbi napvégi e
 | F1 | Beléptetés | A vendég belépésekor egy olyan órát kap, amely egyedi azonosítóval látja el a vendéget, és ezt az eszközt minden csúszáskor használnia kell. |
 | F2 | Csúszdák használata | Csúszdát csak olyan vendég használhat, akinek órája van. Minden használatkor az órán lévő számla terhelődik. |
 | F3 | Vendég adat lekérdezés | A dolgozó lekérdezheti az adott vendég adatait, tartalmazva a csúszdák használatát és jelenlegi számláját. |
-| F4 | Órák adatainak lekérdezése | Használatban lévő órák adatainak lekérdezése |
-| F5 | Napi/havi statisztika lekérdezése | A dolgozók számára a csúszdák napi és havi statisztikájának lekérdezése az óra segítségével. |
-| F6 | Vendég számlájának előállítása | A vendég számlát kap az Aquapark elhagyása előtt, amely tartalmazza a csúszdák használatát, és a vele járó költségeket, melyeket fizetnie kell. |
-| F7 | Saját csúszási adatok lekérdezése | A vendég számára elérhető a saját csúszási adatainak lekérdezése. |
-| F8 | Jelenlegi költségek lekérdezése | A vendég képes a jelenlegi költségeit lekérdezni. |
-| F9 | Kiléptetés | A vendég az Aquapark elhagyásakor visszaadja az óráját, melyet egy másik vendég újra megkaphat. |
+| F4 | Jelenlegi költségek lekérdezése | A vendég képes a jelenlegi költségeit lekérdezni. |
+| F5 | Vendég számlájának előállítása | A vendég számlát kap az Aquapark elhagyása előtt, amely tartalmazza a költségeket, melyeket fizetnie kell. |
+| F6 | Kiléptetés | A vendég az Aquapark elhagyásakor visszaadja az óráját, melyet egy másik vendég újra megkaphat. |
 
 ## Adatfa
 
 #### F1 | Beléptetés
 ```
 {
-guest_id: int,
-watch_id: int,
-transaction_id: int,
-timestamp: dateTime
+guestName: String,
+watchId: Integer,
+arrival: dateTime
 }
 ```
 
 #### F2 | Csúszdák használata
 ```
 {
-guest_id: int,
-watch_id: int,
-transaction_id: int,
-slide_id: int,
-timestamp: dateTime
+guestName: String,
+watchId: Integer,
+slideId: Integer,
+expense: Integer
 }
 ```
 
 #### F3 | Vendég adat lekérdezés
 ```
 {
-guest_id: int,
-watch_id: int,
-slideusage: [
-    {
-        guest_id: int,
-        watch_id: int,
-        slide_id: int,
-        timestamp: dateTime
-    }
-            ]
+guestName: String,
+watchId: Integer,
+payId: Integer,
+arrival: dateTime          
 }
 ```
 
-#### F4 | Órák adatainak lekérdezése
+#### F4 | Jelenlegi költségek lekérdezése
 ```
 {
-guest_id: int,
-watch_id: int,
-total_watch: int
+guestName: String,
+watchId: Integer,
+expense: Integer
 }
 ```
 
-#### F5 | Napi/havi statisztika lekérdezése
+#### F5 | Vendég számlájának előállítása
 ```
 {
-total_income: int,
-stat: [
-    {
-        slide_id: int,
-        slide_income: int,
-        slideusage: [
-            {
-                watch_id: int,
-                slide_id: int,
-                timestamp: dateTime
-            }
-                    ]
-    }
+guestName: String,
+expense: Integer
 }
 ```
 
-#### F6 | Vendég számlájának előállítása
+#### F6 | Kiléptetés
 ```
 {
-    transaction_id: int,
-    receipt_id: int,
-    total_expense: int,
-    slideusages: [
-        {
-            guest_id: int,
-            watch_id: int,
-            slide_id: int,            
-            timestamp: dateTime
-        }
-                 ]
-}
-```
-
-#### F7 | Saját csúszási adatok lekérdezése
-```
-{
-guest_id: int,
-watch_id: int,
-slideusage: [
-     {
-        guest_id: int,
-        watch_id: int,
-        slide_id: int,
-        timestamp: dateTime   
-     }
-            ]
-}
-```
-
-#### F8 | Jelenlegi költségek lekérdezése
-```
-{
-guest_id: int,
-watch_id: int,
-transaction_id: int,
-slideusage: [
-    {
-        guest_id: int,
-        watch_id: int,
-        slide_id: int,
-        timestamp: dateTime,
-        slide_expense: int
-    }
-            ]
-}
-```
-
-#### F9 | Kiléptetés
-```
-{
-guest_id: int,
-watch_id: int
+guestName: String
 }
 ```
 
