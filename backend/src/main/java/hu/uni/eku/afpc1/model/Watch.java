@@ -9,6 +9,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Watch {
 
-    private int watch_id;
+    private Integer watchId;
 
 }

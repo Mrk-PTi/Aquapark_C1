@@ -20,7 +20,8 @@ public class PayServiceImpl implements PayService {
     public void record(Pay Pay) throws PayAlreadyExistsException {
         final boolean isAlreadyRecorded = dao.readAll()
                 .stream()
-                .anyMatch( t -> t.getPay_id() == Pay.getPay_id());
+                .anyMatch( p -> p.getPayId() == Pay.getPayId()
+                && p.getExpense() == Pay.getExpense());
         if(isAlreadyRecorded){
             log.info("Pay {} is already recorded!", Pay);
             throw new PayAlreadyExistsException(String.format("Pay (%s) already exists!", Pay.toString()));

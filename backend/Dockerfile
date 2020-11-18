@@ -1,6 +1,6 @@
 FROM maven:3-openjdk-11 as build
 
-LABEL maintainer="Zsolt Toth"
+LABEL maintainer="AFP_C1"
 
 WORKDIR /tmp
 COPY pom.xml .

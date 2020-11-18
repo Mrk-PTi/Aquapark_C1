@@ -7,5 +7,6 @@ import lombok.Data;
 @Builder
 public class PayDTO {
 
-    private int pay_id;
+    private Integer payId;
+    private Integer expense;
 }

@@ -1,7 +1,6 @@
 package hu.uni.eku.afpc1.dao.entity;
 
 import lombok.*;
-import org.hibernate.annotations.Generated;
 
 import javax.persistence.*;
 
@@ -17,5 +16,7 @@ public class Pay {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int Id;
     @Column
-    private int pay_id;
+    private Integer payId;
+    @Column
+    private Integer expense;
 }

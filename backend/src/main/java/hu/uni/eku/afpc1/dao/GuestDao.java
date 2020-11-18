@@ -10,7 +10,7 @@ public interface GuestDao {
 
     Collection<Guest> readAll();
 
-    void update(int guest_id, Guest updated);
+    void update(String guestName, Guest updated);
 
-    void delete(int guest_id);
+    void delete(String guestName);
 }

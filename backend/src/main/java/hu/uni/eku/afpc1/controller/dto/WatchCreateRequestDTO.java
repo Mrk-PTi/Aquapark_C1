@@ -11,5 +11,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class WatchCreateRequestDTO {
 
-    private int watch_id;
+    private Integer watchId;
 }

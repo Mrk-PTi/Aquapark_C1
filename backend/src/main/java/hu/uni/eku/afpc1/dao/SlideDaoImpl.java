@@ -27,16 +27,16 @@ public class SlideDaoImpl implements SlideDao {
     }
 
     @Override
-    public void update(int slide_id, Slide updated) {
-        hu.uni.eku.afpc1.dao.entity.Slide temp = repository.findBySlide_id(slide_id);
-        temp.setSlide_id(updated.getSlide_id());
-        temp.setSlide_expenses(updated.getSlide_expense());
+    public void update(Integer slideId, Slide updated) {
+        hu.uni.eku.afpc1.dao.entity.Slide temp = repository.findBySlideId(slideId);
+        temp.setSlideId(updated.getSlideId());
+        temp.setSlideExpenses(updated.getSlideExpense());
         repository.save(temp);
     }
 
     @Override
-    public void delete(int slide_id) {
-        hu.uni.eku.afpc1.dao.entity.Slide result = repository.findBySlide_id(slide_id);
+    public void delete(Integer slideId) {
+        hu.uni.eku.afpc1.dao.entity.Slide result = repository.findBySlideId(slideId);
         if(result != null)
             repository.delete(result);
     }
@@ -45,15 +45,15 @@ public class SlideDaoImpl implements SlideDao {
 
         private static Slide entity2model(hu.uni.eku.afpc1.dao.entity.Slide entity){
             return new Slide(
-                    entity.getSlide_expenses(),
-                    entity.getSlide_id()
+                    entity.getSlideExpenses(),
+                    entity.getSlideId()
             );
         }
 
         private static hu.uni.eku.afpc1.dao.entity.Slide model2entity(Slide model){
             return hu.uni.eku.afpc1.dao.entity.Slide.builder()
-                    .slide_expenses(model.getSlide_expense())
-                    .slide_id(model.getSlide_id())
+                    .slideExpenses(model.getSlideExpense())
+                    .slideId(model.getSlideId())
                     .build();
         }
 

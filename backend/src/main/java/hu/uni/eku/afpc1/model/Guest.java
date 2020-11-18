@@ -10,8 +10,8 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Guest {
-    private int guest_id;
-    //private Watch watch;
-    //private Pay pay;
+    private String guestName;
+    private Integer watchId;
+    private Integer payId;
     private LocalDateTime arrivalDateTime;
 }

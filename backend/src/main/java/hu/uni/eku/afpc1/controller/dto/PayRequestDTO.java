@@ -10,5 +10,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class PayRequestDTO {
-    private int pay_id;
+    private Integer payId;
+    private Integer expense;
 }

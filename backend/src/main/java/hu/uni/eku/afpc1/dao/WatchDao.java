@@ -10,7 +10,7 @@ public interface WatchDao {
 
     Collection<Watch> readAll();
 
-    void update(int watch_id, Watch updated);
+    void update(Integer watchId, Watch updated);
 
-    void delete(int watch_id);
+    void delete(Integer watchId);
 }

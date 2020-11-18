@@ -27,15 +27,18 @@ public class GuestDaoImpl implements GuestDao {
     }
 
     @Override
-    public void update(int guest_id, Guest updated) {
-        hu.uni.eku.afpc1.dao.entity.Guest temp = repository.findByGuest_id(guest_id);
-        temp.setGuest_id(updated.getGuest_id());
+    public void update(String guestName, Guest updated) {
+        hu.uni.eku.afpc1.dao.entity.Guest temp = repository.findByGuestName(guestName);
+        temp.setGuestName(updated.getGuestName());
+        temp.setWatchId(updated.getWatchId());
+        temp.setPayId(updated.getPayId());
+        temp.setArrivalDateTime(updated.getArrivalDateTime());
         repository.save(temp);
     }
 
     @Override
-    public void delete(int guest_id) {
-        hu.uni.eku.afpc1.dao.entity.Guest temp = repository.findByGuest_id(guest_id);
+    public void delete(String guestName) {
+        hu.uni.eku.afpc1.dao.entity.Guest temp = repository.findByGuestName(guestName);
         if(temp != null)
             repository.delete(temp);
     }
@@ -43,12 +46,14 @@ public class GuestDaoImpl implements GuestDao {
     private static class GuestEntityModelConverter{
 
         private static Guest entity2model(hu.uni.eku.afpc1.dao.entity.Guest entity){
-            return new Guest(entity.getGuest_id(), entity.getArrivalDateTime());
+            return new Guest(entity.getGuestName(), entity.getWatchId(), entity.getPayId(), entity.getArrivalDateTime());
         }
 
         private static hu.uni.eku.afpc1.dao.entity.Guest model2entity(Guest model){
             return hu.uni.eku.afpc1.dao.entity.Guest.builder()
-                    .guest_id(model.getGuest_id())
+                    .guestName(model.getGuestName())
+                    .watchId(model.getWatchId())
+                    .payId((model.getPayId()))
                     .arrivalDateTime(model.getArrivalDateTime())
                     .build();
         }

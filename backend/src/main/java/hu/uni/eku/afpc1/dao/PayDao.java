@@ -10,7 +10,7 @@ public interface PayDao {
 
     Collection<Pay> readAll();
 
-    void update(int pay_id, Pay updated);
+    void update(Integer payId, Pay updated);
 
-    void delete(int pay_id);
+    void delete(Integer payId);
 }

@@ -21,9 +21,9 @@ public class SlideServiceImpl implements SlideService {
         final boolean isAlreadyRecorded = dao.readAll()
                 .stream()
                 .anyMatch( s ->
-                        s.getSlide_expense() == slide.getSlide_expense()
+                        s.getSlideExpense() == slide.getSlideExpense()
                                 &&
-                                s.getSlide_id() == slide.getSlide_id());
+                                s.getSlideId() == slide.getSlideId());
         if(isAlreadyRecorded){
             log.info("This slide {} is already recorded!", slide);
             throw new SlideAlreadyExistsException(String.format("This slide (%s) already exists!", slide.toString()));

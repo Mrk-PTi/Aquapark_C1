@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Pay{
 
-    private int pay_id;
+    private Integer payId;
+    private Integer expense;
 
 }

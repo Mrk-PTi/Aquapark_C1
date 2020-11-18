@@ -32,11 +32,11 @@ public class WatchController {
             @RequestBody
             WatchCreateRequestDTO request
     ){
-        log.info("Recording of Watch ({})",request.getWatch_id());
+        log.info("Recording of Watch ({})",request.getWatchId());
         try {
-            service.record(new Watch(request.getWatch_id()));
+            service.record(new Watch(request.getWatchId()));
         } catch (WatchAlreadyExistsException e) {
-            log.info("Watch ({}) is already exists! Message: {}", request.getWatch_id(), e.getMessage());
+            log.info("Watch ({}) is already exists! Message: {}", request.getWatchId(), e.getMessage());
             throw new ResponseStatusException(
                     HttpStatus.CONFLICT,
                     e.getMessage()
@@ -50,7 +50,7 @@ public class WatchController {
     public Collection<WatchDTO> query(){
         return service.readAll().stream().map(model ->
                 WatchDTO.builder()
-                .watch_id(model.getWatch_id())
+                .watchId(model.getWatchId())
                 .build()
         ).collect(Collectors.toList());
     }

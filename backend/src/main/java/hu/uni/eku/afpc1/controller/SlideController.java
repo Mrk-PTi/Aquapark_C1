@@ -32,11 +32,11 @@ public class SlideController {
             @RequestBody
                     SlideCreateRequestDTO request
     ){
-        log.info("Recording of Slide ({},{})",request.getSlide_id(), request.getSlide_expenses());
+        log.info("Recording of Slide ({},{})",request.getSlideId(), request.getSlideExpenses());
         try {
-            service.record(new Slide(request.getSlide_id(), request.getSlide_expenses()));
+            service.record(new Slide(request.getSlideId(), request.getSlideExpenses()));
         } catch (SlideAlreadyExistsException e) {
-            log.info("Slide ({},{}) is already exists! Message: {}", request.getSlide_id(), request.getSlide_expenses(), e.getMessage());
+            log.info("Slide ({},{}) is already exists! Message: {}", request.getSlideId(), request.getSlideExpenses(), e.getMessage());
             throw new ResponseStatusException(
                     HttpStatus.CONFLICT,
                     e.getMessage()
@@ -50,8 +50,8 @@ public class SlideController {
     public Collection<SlideDTO> query(){
         return service.readAll().stream().map(model ->
                 SlideDTO.builder()
-                        .slide_id(model.getSlide_id())
-                        .slide_expense(model.getSlide_expense())
+                        .slideId(model.getSlideId())
+                        .slideExpense(model.getSlideExpense())
                         .build()
         ).collect(Collectors.toList());
     }
