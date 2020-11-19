@@ -2,7 +2,7 @@ import axios from 'axios';
 import dispatcher from '../dispatcher/Dispatcher';
 import * as actionConstants from '../dispatcher/GuestActionConstants'
 
-export const recordGuest = ({watchId}) =>{
+export const recordGuest = ({questName, watchId, payId, arrivalDateTime}) =>{
     axios.post('/Guest/record',
         {
             questName : questName,
@@ -33,8 +33,8 @@ export const fetchGuests = () =>{
     })
 }
 
-export const deleteGuest = (watchId) =>{
-    axios.delete(`/guest/${watchId}`)
+export const deleteGuest = (questName) =>{
+    axios.delete(`/guest/${questName}`)
         .then(() => {
             fetchGuests();
             dispatcher.dispatch({action : actionConstants.clearError});
