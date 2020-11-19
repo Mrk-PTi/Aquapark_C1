@@ -2,10 +2,10 @@ import axios from 'axios';
 import dispatcher from '../dispatcher/Dispatcher';
 import * as actionConstants from '../dispatcher/WatchActionConstants'
 
-export const recordWatch = ({watch_id}) =>{
+export const recordWatch = ({watchId}) =>{
     axios.post('/Watch/record',
         {
-            watch_id : watch_id
+            watchId : watchId
         })
         .then(() => {
             fetchWatches();
