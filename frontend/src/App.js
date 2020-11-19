@@ -4,6 +4,8 @@ import './App.css';
 import WatchRecordingForm from "./component/WatchRecordingForm";
 import WatchList from "./component/WatchList";
 import bg from "./video/bg.mp4";
+import GuestRecordingForm from "./component/GuestRecordingForm";
+import GuestList from "./component/GuestList";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
         <div id="content" className="round">
             <WatchRecordingForm/>
             <WatchList/>
+            <GuestRecordingForm/>
+            <GuestList/>
         </div>
         <footer className="round">
             <p>Made by Group 1</p>
