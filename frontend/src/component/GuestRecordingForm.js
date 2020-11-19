@@ -6,7 +6,10 @@ class GuestRecordingForm extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            watchId : 0
+            guestName : "",
+            watchId : 0,
+            payId : 0,
+            arrivalDateTime : null
         };
         this.formOnChange = this.formOnChange.bind(this);
     }
@@ -20,8 +23,8 @@ class GuestRecordingForm extends React.Component{
         return(
             <div>
                 <ErrorMessageWell/>
-                <label htmlFor={"watchId"} >Watch</label>
-                <input type={"number"} id={"watchId"} name={"watchId"} value={this.state.watchId} onChange={this.formOnChange}/>
+                <label htmlFor={"guestName"} >Guest</label>
+                <input type={"text"} id={"guestName"} name={"guestName"} value={this.state.guestName} onChange={this.formOnChange}/>
                 <br/>
                 <button onClick={()=> actions.recordGuest(this.state)}>Submit</button>
                 <button onClick={()=> actions.fetchGuests(this.state)}>List</button>
