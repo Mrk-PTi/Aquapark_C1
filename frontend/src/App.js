@@ -21,10 +21,15 @@ function App() {
             </div>
         </div>
         <div id="content" className="round">
-            <WatchRecordingForm/>
-            <WatchList/>
-            <GuestRecordingForm/>
-            <GuestList/>
+            <div id="firstdiv">
+                <WatchRecordingForm/>
+                <WatchList/>
+            </div>
+            <hr id="firsthr"/>
+            <div id="seconddiv">
+                <GuestRecordingForm/>
+                <GuestList/>
+            </div>
         </div>
         <footer className="round">
             <p>Made by Group 1</p>
