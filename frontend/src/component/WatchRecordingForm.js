@@ -24,6 +24,8 @@ class WatchRecordingForm extends React.Component{
                 <input type={"number"} id={"watchId"} name={"watchId"} value={this.state.watchId} onChange={this.formOnChange}/>
                 <br/>
                 <button onClick={()=> actions.recordWatch(this.state)}>Submit</button>
+                <button onClick={()=> actions.fetchWatches(this.state)}>List</button>
+                <button onClick={()=> actions.deleteWatch(this.state)}>Delete</button>
             </div>
         );
     }

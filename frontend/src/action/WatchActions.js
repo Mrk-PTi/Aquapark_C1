@@ -29,3 +29,18 @@ export const fetchWatches = () =>{
         });
     })
 }
+
+export const deleteWatch = (watchId) =>{
+    axios.delete(`/watch/${watchId}`)
+        .then(() => {
+            fetchWatches();
+            dispatcher.dispatch({action : watchActionConstants.clearError});
+        })
+        .catch((err) => {
+            dispatcher.dispatch({
+                action : watchActionConstants.showError,
+                payload: `${err.response.status}-${err.response.statusText}: ${err.response.data.message}`
+            });
+            fetchWatches();
+        });
+}
