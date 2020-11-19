@@ -23,7 +23,7 @@ function App() {
             <WatchList/>
         </div>
         <footer className="round">
-            <p>Made by group1</p>
+            <p>Made by Group 1</p>
         </footer>
     </div>
   );
