@@ -3,6 +3,8 @@ import './App.scss';
 import './App.css';
 import WatchRecordingForm from "./component/WatchRecordingForm";
 import WatchList from "./component/WatchList";
+import SlideRecordingForm from "./component/SlideRecordingForm";
+import SlideList from "./component/SlideList";
 import bg from "./video/bg.mp4";
 
 function App() {
@@ -21,6 +23,8 @@ function App() {
         <div id="content" className="round">
             <WatchRecordingForm/>
             <WatchList/>
+            <SlideRecordingForm/>
+            <SlideList/>
         </div>
         <footer className="round">
             <p>Made by group1</p>
