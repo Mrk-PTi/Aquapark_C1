@@ -6,6 +6,8 @@ import WatchList from "./component/WatchList";
 import SlideRecordingForm from "./component/SlideRecordingForm";
 import SlideList from "./component/SlideList";
 import bg from "./video/bg.mp4";
+import GuestRecordingForm from "./component/GuestRecordingForm";
+import GuestList from "./component/GuestList";
 
 function App() {
   return (
@@ -21,13 +23,18 @@ function App() {
             </div>
         </div>
         <div id="content" className="round">
-            <WatchRecordingForm/>
-            <WatchList/>
-            <SlideRecordingForm/>
-            <SlideList/>
-        </div>
+    <<<<<<< 36-guest-komponensek-megirasa
+            <div id="firstdiv">
+                <WatchRecordingForm/>
+                <WatchList/>
+            </div>
+            <hr id="firsthr"/>
+            <div id="seconddiv">
+                <GuestRecordingForm/>
+                <GuestList/>
+            </div>
         <footer className="round">
-            <p>Made by group1</p>
+            <p>Made by Group 1</p>
         </footer>
     </div>
   );
