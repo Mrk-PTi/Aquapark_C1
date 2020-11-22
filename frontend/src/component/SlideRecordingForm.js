@@ -6,7 +6,8 @@ class SlideRecordingForm extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            slideId : 0
+            slideId : 0,
+            slideExpense : 0
         };
         this.formOnChange = this.formOnChange.bind(this);
     }
