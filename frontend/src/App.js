@@ -35,7 +35,7 @@ function App() {
         </div>
         <footer className="round">
             <p>Made by Group 1</p>
-            <p>All rights reserved.</p>
+            <p>All rights reserved.©</p>
         </footer>
     </div>
   );
