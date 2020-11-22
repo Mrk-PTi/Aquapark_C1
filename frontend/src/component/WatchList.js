@@ -27,9 +27,9 @@ class WatchList extends React.Component{
     render() {
         return(
             <div>
-                {this.state.watches.map(({watch_id}, index)=>{
+                {this.state.watches.map(({watchId}, index)=>{
                     return(
-                        <WatchListItem key={index} watch_id={watch_id}/>
+                        <WatchListItem key={index} watchId={watchId}/>
                     );
                 })}
             </div>

@@ -8,8 +8,6 @@ import SlideList from "./component/SlideList";
 import bg from "./video/bg.mp4";
 import GuestRecordingForm from "./component/GuestRecordingForm";
 import GuestList from "./component/GuestList";
-import PayRecordingForm from "./component/PayRecordingForm";
-import PayList from "./component/PayList";
 
 function App() {
     return (
@@ -40,7 +38,6 @@ function App() {
                 <p>All rights reserved.</p>
             </footer>
         </div>
-    );
 }
 
 export default App;

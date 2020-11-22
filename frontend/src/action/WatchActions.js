@@ -2,10 +2,10 @@ import axios from 'axios';
 import dispatcher from '../dispatcher/Dispatcher';
 import * as actionConstants from '../dispatcher/WatchActionConstants'
 
-export const recordWatch = ({watch_id}) =>{
+export const recordWatch = ({watchId}) =>{
     axios.post('/Watch/record',
         {
-            watch_id : watch_id
+            watchId : watchId
         })
         .then(() => {
             fetchWatches();
@@ -28,4 +28,19 @@ export const fetchWatches = () =>{
             payload: resp.data
         });
     })
+}
+
+export const deleteWatch = (watchId) =>{
+    axios.delete(`/watch/${watchId}`)
+        .then(() => {
+            fetchWatches();
+            dispatcher.dispatch({action : actionConstants.clearError});
+        })
+        .catch((err) => {
+            dispatcher.dispatch({
+                action : actionConstants.showError,
+                payload: `${err.response.status}-${err.response.statusText}: ${err.response.data.message}`
+            });
+            fetchWatches();
+        });
 }
