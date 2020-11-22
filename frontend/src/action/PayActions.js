@@ -32,7 +32,7 @@ export const fetchPays = () =>{
 export const deletePay = (payId) =>{
     axios.delete(`/Pay/${payId}`)
         .then(() => {
-            fetchPays();
+
             dispatcher.dispatch({action : actionConstants.clearError});
         })
         .catch((err) => {
@@ -40,6 +40,6 @@ export const deletePay = (payId) =>{
                 action : actionConstants.showError,
                 payload: `${err.response.status}-${err.response.statusText}: ${err.response.data.message}`
             });
-            fetchPays();
+
         });
 }

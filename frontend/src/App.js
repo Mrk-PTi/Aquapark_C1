@@ -10,8 +10,6 @@ import GuestRecordingForm from "./component/GuestRecordingForm";
 import GuestList from "./component/GuestList";
 import PayRecordingForm from "./component/PayRecordingForm";
 import PayList from "./component/PayList";
-import ComplexNumberRecordingForm from "./component/ComplexNumberRecordingForm";
-import ComplexNumberList from "./component/ComplexNumberList";
 
 function App() {
     return (

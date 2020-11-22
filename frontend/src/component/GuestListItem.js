@@ -1,8 +1,8 @@
 import React from 'react';
 
-function GuestListItem({questName}, {watchId}, {payId}, {arrivalDateTime}){
+function GuestListItem({guestName}, {watchId}, {payId}, {arrivalDateTime}){
     return (
-        <span>({questName} {watchId} {payId} {arrivalDateTime})</span>
+        <span>({guestName}, {watchId}, {payId}, {arrivalDateTime})</span>
     );
 }
 
