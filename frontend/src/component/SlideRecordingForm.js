@@ -20,10 +20,10 @@ class SlideRecordingForm extends React.Component{
         return(
             <div>
                 <ErrorMessageWell/>
-                <label htmlFor={"slideId"} >Slide</label>
+                <label htmlFor={"slideId"} >Slide Id</label>
                 <input type={"number"} id={"slideId"} name={"slideId"} value={this.state.slideId} onChange={this.formOnChange}/>
                 <br/>
-                <label htmlFor={"slideExpense"} >Expense</label>
+                <label htmlFor={"slideExpense"} >Cost</label>
                 <input type={"number"} id={"slideExpense"} name={"slideExpense"} value={this.state.slideExpense} onChange={this.formOnChange}/>
                 <br/>
                 <button onClick={()=> actions.recordSlide(this.state)}>Submit</button>

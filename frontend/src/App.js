@@ -8,6 +8,10 @@ import SlideList from "./component/SlideList";
 import bg from "./video/bg.mp4";
 import GuestRecordingForm from "./component/GuestRecordingForm";
 import GuestList from "./component/GuestList";
+import PayRecordingForm from "./component/PayRecordingForm";
+import PayList from "./component/PayList";
+import ComplexNumberRecordingForm from "./component/ComplexNumberRecordingForm";
+import ComplexNumberList from "./component/ComplexNumberList";
 
 function App() {
     return (
@@ -23,14 +27,24 @@ function App() {
                 </div>
             </div>
             <div id="content" className="round">
+
+                <div id="firstdiv">
+                    <GuestRecordingForm/>
+                    <GuestList/>
+                </div>
                 <div id="firstdiv">
                     <WatchRecordingForm/>
                     <WatchList/>
                 </div>
-                <hr id="firsthr"/>
-                <div id="seconddiv">
-                    <GuestRecordingForm/>
-                    <GuestList/>
+                <div id="firstdiv">
+                    <SlideRecordingForm/>
+                    <SlideList/>
+                </div>
+                <div id="firstdiv">
+                    <PayRecordingForm/>
+                    <PayList/>
+                </div>
+                <div id="messagediv">
                 </div>
             </div>
             <footer className="round">

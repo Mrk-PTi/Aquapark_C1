@@ -9,7 +9,6 @@ export const recordSlide = ({slideId, slideExpense}) =>{
             slideExpense : slideExpense
         })
         .then(() => {
-            fetchSlides();
             dispatcher.dispatch({action : actionConstants.clearError});
         })
         .catch((err) => {
@@ -17,13 +16,12 @@ export const recordSlide = ({slideId, slideExpense}) =>{
                 action : actionConstants.showError,
                 payload: `${err.response.status}-${err.response.statusText}: ${err.response.data.message}`
             });
-            fetchSlides();
         });
 }
 
 export const fetchSlides = () =>{
 
-    axios.get('/slide/').then((resp)=>{
+    axios.get('/Slide/').then((resp)=>{
         dispatcher.dispatch({
             action : actionConstants.refresh,
             payload: resp.data
@@ -32,7 +30,7 @@ export const fetchSlides = () =>{
 }
 
 export const deleteSlide = (slideId) =>{
-    axios.delete(`/slide/${slideId}`)
+    axios.delete(`/Slide/${slideId}`)
         .then(() => {
             fetchSlides();
             dispatcher.dispatch({action : actionConstants.clearError});

@@ -20,7 +20,7 @@ class WatchRecordingForm extends React.Component{
         return(
             <div>
                 <ErrorMessageWell/>
-                <label htmlFor={"watchId"} >Watch</label>
+                <label htmlFor={"watchId"} >Watch Id</label>
                 <input type={"number"} id={"watchId"} name={"watchId"} value={this.state.watchId} onChange={this.formOnChange}/>
                 <br/>
                 <button onClick={()=> actions.recordWatch(this.state)}>Submit</button>

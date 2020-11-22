@@ -8,7 +8,6 @@ export const recordWatch = ({watchId}) =>{
             watchId : watchId
         })
         .then(() => {
-            fetchWatches();
             dispatcher.dispatch({action : actionConstants.clearError});
         })
         .catch((err) => {
@@ -16,13 +15,12 @@ export const recordWatch = ({watchId}) =>{
                 action : actionConstants.showError,
                 payload: `${err.response.status}-${err.response.statusText}: ${err.response.data.message}`
             });
-            fetchWatches();
         });
 }
 
 export const fetchWatches = () =>{
 
-    axios.get('/watch/').then((resp)=>{
+    axios.get('/Watch/').then((resp)=>{
         dispatcher.dispatch({
             action : actionConstants.refresh,
             payload: resp.data
@@ -31,7 +29,7 @@ export const fetchWatches = () =>{
 }
 
 export const deleteWatch = (watchId) =>{
-    axios.delete(`/watch/${watchId}`)
+    axios.delete(`/Watch/${watchId}`)
         .then(() => {
             fetchWatches();
             dispatcher.dispatch({action : actionConstants.clearError});

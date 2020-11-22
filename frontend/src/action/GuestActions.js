@@ -11,7 +11,6 @@ export const recordGuest = ({questName, watchId, payId, arrivalDateTime}) =>{
             arrivalDateTime : arrivalDateTime
         })
         .then(() => {
-            fetchGuests();
             dispatcher.dispatch({action : actionConstants.clearError});
         })
         .catch((err) => {
@@ -19,13 +18,12 @@ export const recordGuest = ({questName, watchId, payId, arrivalDateTime}) =>{
                 action : actionConstants.showError,
                 payload: `${err.response.status}-${err.response.statusText}: ${err.response.data.message}`
             });
-            fetchGuests();
         });
 }
 
 export const fetchGuests = () =>{
 
-    axios.get('/guest/').then((resp)=>{
+    axios.get('/Guest/').then((resp)=>{
         dispatcher.dispatch({
             action : actionConstants.refresh,
             payload: resp.data
@@ -34,7 +32,7 @@ export const fetchGuests = () =>{
 }
 
 export const deleteGuest = (questName) =>{
-    axios.delete(`/guest/${questName}`)
+    axios.delete(`/Guest/${questName}`)
         .then(() => {
             fetchGuests();
             dispatcher.dispatch({action : actionConstants.clearError});
