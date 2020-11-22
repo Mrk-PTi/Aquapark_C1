@@ -3,6 +3,8 @@ import './App.scss';
 import './App.css';
 import WatchRecordingForm from "./component/WatchRecordingForm";
 import WatchList from "./component/WatchList";
+import SlideRecordingForm from "./component/SlideRecordingForm";
+import SlideList from "./component/SlideList";
 import bg from "./video/bg.mp4";
 import GuestRecordingForm from "./component/GuestRecordingForm";
 import GuestList from "./component/GuestList";
@@ -21,6 +23,7 @@ function App() {
             </div>
         </div>
         <div id="content" className="round">
+    <<<<<<< 36-guest-komponensek-megirasa
             <div id="firstdiv">
                 <WatchRecordingForm/>
                 <WatchList/>
@@ -30,7 +33,6 @@ function App() {
                 <GuestRecordingForm/>
                 <GuestList/>
             </div>
-        </div>
         <footer className="round">
             <p>Made by Group 1</p>
         </footer>
