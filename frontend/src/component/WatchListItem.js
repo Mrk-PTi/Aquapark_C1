@@ -1,8 +1,8 @@
 import React from 'react';
 
-function WatchListItem({watch_id}){
+function WatchListItem({watchId}){
     return (
-        <span>({watch_id})</span>
+        <span>({watchId})</span>
     );
 }
 

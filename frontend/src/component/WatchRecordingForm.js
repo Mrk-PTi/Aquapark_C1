@@ -6,7 +6,7 @@ class WatchRecordingForm extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            watch_id : 0
+            watchId : 0
         };
         this.formOnChange = this.formOnChange.bind(this);
     }
@@ -20,10 +20,12 @@ class WatchRecordingForm extends React.Component{
         return(
             <div>
                 <ErrorMessageWell/>
-                <label htmlFor={"watch_id"} >Watch_id</label>
-                <input type={"number"} id={"watch_id"} name={"watch_id"} value={this.state.watch_id} onChange={this.formOnChange}/>
+                <label htmlFor={"watchId"} >Watch</label>
+                <input type={"number"} id={"watchId"} name={"watchId"} value={this.state.watchId} onChange={this.formOnChange}/>
                 <br/>
                 <button onClick={()=> actions.recordWatch(this.state)}>Submit</button>
+                <button onClick={()=> actions.fetchWatches(this.state)}>List</button>
+                <button onClick={()=> actions.deleteWatch(this.state)}>Delete</button>
             </div>
         );
     }
