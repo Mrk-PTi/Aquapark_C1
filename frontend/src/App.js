@@ -38,6 +38,7 @@ function App() {
                 <p>All rights reserved.</p>
             </footer>
         </div>
+    );
 }
 
 export default App;
