@@ -49,7 +49,17 @@ a:active {
     float: left;
     width: 35%;
 }
+#thirddiv{
+    float: left;
+    width: 35%;
+}
 #firsthr{
+    position: fixed;
+    border-left: 3px solid black;
+    height: 46%;
+    right: 1125px;
+}
+#secondhr{
     position: fixed;
     border-left: 3px solid black;
     height: 46%;

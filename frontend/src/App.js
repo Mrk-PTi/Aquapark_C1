@@ -23,7 +23,6 @@ function App() {
             </div>
         </div>
         <div id="content" className="round">
-    <<<<<<< 36-guest-komponensek-megirasa
             <div id="firstdiv">
                 <WatchRecordingForm/>
                 <WatchList/>
@@ -33,8 +32,10 @@ function App() {
                 <GuestRecordingForm/>
                 <GuestList/>
             </div>
+        </div>
         <footer className="round">
             <p>Made by Group 1</p>
+            <p>All rights reserved.</p>
         </footer>
     </div>
   );
