@@ -10,35 +10,34 @@ import GuestRecordingForm from "./component/GuestRecordingForm";
 import GuestList from "./component/GuestList";
 
 function App() {
-  return (
-    <div className={["App","container"]}>
+    return (
+        <div className={["App","container"]}>
 
-        <video src={bg} autoPlay="true" loop="true" muted="true"/>
-        <div className="header">
-            <a href="#default" className="logo">Aquapark</a>
-            <div className="header-right">
-                <a className="active" href="#home">Home</a>
-                <a href="#contact">Contact</a>
-                <a href="#about">About</a>
+            <video src={bg} autoPlay="true" loop="true" muted="true"/>
+            <div className="header">
+                <a href="#default" className="logo">Aquapark</a>
+                <div className="header-right">
+                    <a className="active" href="#home">Home</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#about">About</a>
+                </div>
             </div>
+            <div id="content" className="round">
+                <div id="firstdiv">
+                    <WatchRecordingForm/>
+                    <WatchList/>
+                </div>
+                <hr id="firsthr"/>
+                <div id="seconddiv">
+                    <GuestRecordingForm/>
+                    <GuestList/>
+                </div>
+            </div>
+            <footer className="round">
+                <p>Made by Group 1</p>
+                <p>All rights reserved.</p>
+            </footer>
         </div>
-        <div id="content" className="round">
-            <div id="firstdiv">
-                <WatchRecordingForm/>
-                <WatchList/>
-            </div>
-            <hr id="firsthr"/>
-            <div id="seconddiv">
-                <GuestRecordingForm/>
-                <GuestList/>
-            </div>
-        </div>
-        <footer className="round">
-            <p>Made by Group 1</p>
-            <p>All rights reserved.©</p>
-        </footer>
-    </div>
-  );
 }
 
 export default App;
