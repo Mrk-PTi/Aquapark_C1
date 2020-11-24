@@ -4,6 +4,7 @@ import hu.uni.eku.afpc1.controller.dto.WatchDTO;
 import hu.uni.eku.afpc1.controller.dto.WatchCreateRequestDTO;
 import hu.uni.eku.afpc1.model.Watch;
 import hu.uni.eku.afpc1.service.WatchService;
+import hu.uni.eku.afpc1.service.exceptions.NotFoundException;
 import hu.uni.eku.afpc1.service.exceptions.WatchAlreadyExistsException;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -20,7 +21,7 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping(value = "/Watch")
 @RequiredArgsConstructor
-@Api(tags = "Watches")
+@Api(tags = "Watch")
 @Slf4j
 public class WatchController {
 
@@ -30,9 +31,9 @@ public class WatchController {
     @ApiOperation(value = "Record")
     public void record(
             @RequestBody
-            WatchCreateRequestDTO request
-    ){
-        log.info("Recording of Watch ({})",request.getWatchId());
+                    WatchCreateRequestDTO request
+    ) {
+        log.info("Recording of Watch ({})", request.getWatchId());
         try {
             service.record(new Watch(request.getWatchId()));
         } catch (WatchAlreadyExistsException e) {
@@ -46,13 +47,22 @@ public class WatchController {
 
     @GetMapping(value = {"/"}, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    @ApiOperation(value= "Query Watches")
-    public Collection<WatchDTO> query(){
+    @ApiOperation(value = "Query Watches")
+    public Collection<WatchDTO> query() {
         return service.readAll().stream().map(model ->
                 WatchDTO.builder()
-                .watchId(model.getWatchId())
-                .build()
+                        .watchId(model.getWatchId())
+                        .build()
         ).collect(Collectors.toList());
     }
 
+    @DeleteMapping(value = {"/{watchId}"})
+    @ApiOperation(value = "Delete a watch")
+    public void delete(@PathVariable Integer watchId) {
+        try {
+            service.delete(watchId);
+        } catch (NotFoundException e) {
+            throw new ResponseStatusException(HttpStatus.CONFLICT, e.getMessage());
+        }
+    }
 }

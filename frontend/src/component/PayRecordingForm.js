@@ -6,7 +6,8 @@ class PayRecordingForm extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            payId : 0
+            payId : 0,
+            expense : 0
         };
         this.formOnChange = this.formOnChange.bind(this);
     }
@@ -20,8 +21,11 @@ class PayRecordingForm extends React.Component{
         return(
             <div>
                 <ErrorMessageWell/>
-                <label htmlFor={"payId"} >Pay</label>
+                <label htmlFor={"payId"} >Pay Id</label>
                 <input type={"number"} id={"payId"} name={"payId"} value={this.state.payId} onChange={this.formOnChange}/>
+                <br/>
+                <label htmlFor={"expense"} >Pay Amount</label>
+                <input type={"number"} id={"expense"} name={"expense"} value={this.state.expense} onChange={this.formOnChange}/>
                 <br/>
                 <button onClick={()=> actions.recordPay(this.state)}>Submit</button>
                 <button onClick={()=> actions.fetchPays(this.state)}>List</button>

@@ -2,6 +2,7 @@ package hu.uni.eku.afpc1.service;
 
 import hu.uni.eku.afpc1.dao.SlideDao;
 import hu.uni.eku.afpc1.model.Slide;
+import hu.uni.eku.afpc1.service.exceptions.NotFoundException;
 import hu.uni.eku.afpc1.service.exceptions.SlideAlreadyExistsException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -21,9 +22,9 @@ public class SlideServiceImpl implements SlideService {
         final boolean isAlreadyRecorded = dao.readAll()
                 .stream()
                 .anyMatch( s ->
-                        s.getSlideExpense() == slide.getSlideExpense()
+                        s.getSlideId() == slide.getSlideId()
                                 &&
-                                s.getSlideId() == slide.getSlideId());
+                                s.getSlideExpense() == slide.getSlideExpense());
         if(isAlreadyRecorded){
             log.info("This slide {} is already recorded!", slide);
             throw new SlideAlreadyExistsException(String.format("This slide (%s) already exists!", slide.toString()));
@@ -35,5 +36,10 @@ public class SlideServiceImpl implements SlideService {
     @Override
     public Collection<Slide> readAll() {
         return dao.readAll();
+    }
+
+    @Override
+    public void delete(Integer slideId) throws NotFoundException {
+        dao.delete(slideId);
     }
 }

@@ -20,7 +20,7 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping(value = "/Pay")
 @RequiredArgsConstructor
-@Api(tags = "Pays")
+@Api(tags = "Pay")
 @Slf4j
 public class PayController {
 

@@ -1,8 +1,9 @@
 import React from 'react';
 
-function WatchListItem({payId}){
+function PayListItem({payId, expense}){
     return (
-        <span>({payId})</span>
+        <span>({payId }, {expense})</span>
+
     );
 }
 

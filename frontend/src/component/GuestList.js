@@ -27,9 +27,9 @@ class GuestList extends React.Component{
     render() {
         return(
             <div>
-                {this.state.guests.map(({questName, watchId, payId, arrivalDateTime}, index)=>{
+                {this.state.guests.map(({guestName, watchId, payId, arrivalDateTime}, index)=>{
                     return(
-                        <GuestListItem key={index} questName={questName} watchId={watchId} payId={payId} arrivalDateTime={arrivalDateTime}/>
+                        <GuestListItem key={index} guestName={guestName} watchId={watchId} payId={payId} arrivalDateTime={arrivalDateTime}/>
                     );
                 })}
             </div>

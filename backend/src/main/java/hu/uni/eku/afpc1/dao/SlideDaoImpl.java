@@ -30,7 +30,7 @@ public class SlideDaoImpl implements SlideDao {
     public void update(Integer slideId, Slide updated) {
         hu.uni.eku.afpc1.dao.entity.Slide temp = repository.findBySlideId(slideId);
         temp.setSlideId(updated.getSlideId());
-        temp.setSlideExpenses(updated.getSlideExpense());
+        temp.setSlideExpense(updated.getSlideExpense());
         repository.save(temp);
     }
 
@@ -45,14 +45,14 @@ public class SlideDaoImpl implements SlideDao {
 
         private static Slide entity2model(hu.uni.eku.afpc1.dao.entity.Slide entity){
             return new Slide(
-                    entity.getSlideExpenses(),
+                    entity.getSlideExpense(),
                     entity.getSlideId()
             );
         }
 
         private static hu.uni.eku.afpc1.dao.entity.Slide model2entity(Slide model){
             return hu.uni.eku.afpc1.dao.entity.Slide.builder()
-                    .slideExpenses(model.getSlideExpense())
+                    .slideExpense(model.getSlideExpense())
                     .slideId(model.getSlideId())
                     .build();
         }

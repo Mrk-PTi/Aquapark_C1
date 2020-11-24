@@ -2,13 +2,13 @@ import axios from 'axios';
 import dispatcher from '../dispatcher/Dispatcher';
 import * as actionConstants from '../dispatcher/PayActionConstants'
 
-export const recordPay = ({payId}) =>{
+export const recordPay = ({payId, expense}) =>{
     axios.post('/Pay/record',
         {
-            payId : payId
+            payId : payId,
+            expense : expense
         })
         .then(() => {
-            fetchPays();
             dispatcher.dispatch({action : actionConstants.clearError});
         })
         .catch((err) => {
@@ -16,13 +16,12 @@ export const recordPay = ({payId}) =>{
                 action : actionConstants.showError,
                 payload: `${err.response.status}-${err.response.statusText}: ${err.response.data.message}`
             });
-            fetchPays();
         });
 }
 
 export const fetchPays = () =>{
 
-    axios.get('/pay/').then((resp)=>{
+    axios.get('/Pay/').then((resp)=>{
         dispatcher.dispatch({
             action : actionConstants.refresh,
             payload: resp.data
@@ -30,10 +29,10 @@ export const fetchPays = () =>{
     })
 }
 
-export const deletePay = (payId) =>{
-    axios.delete(`/pay/${payId}`)
+export const deletePay = ({payId}) =>{
+    axios.delete(`/Pay/${payId}`)
         .then(() => {
-            fetchPays();
+
             dispatcher.dispatch({action : actionConstants.clearError});
         })
         .catch((err) => {
@@ -41,6 +40,6 @@ export const deletePay = (payId) =>{
                 action : actionConstants.showError,
                 payload: `${err.response.status}-${err.response.statusText}: ${err.response.data.message}`
             });
-            fetchPays();
+
         });
 }

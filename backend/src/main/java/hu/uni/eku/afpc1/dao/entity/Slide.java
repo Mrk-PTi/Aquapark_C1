@@ -19,5 +19,5 @@ public class Slide {
     @Column
     private Integer slideId;
     @Column
-    private Integer slideExpenses;
+    private Integer slideExpense;
 }

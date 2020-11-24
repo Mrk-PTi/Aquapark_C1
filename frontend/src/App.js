@@ -8,6 +8,8 @@ import SlideList from "./component/SlideList";
 import bg from "./video/bg.mp4";
 import GuestRecordingForm from "./component/GuestRecordingForm";
 import GuestList from "./component/GuestList";
+import PayRecordingForm from "./component/PayRecordingForm";
+import PayList from "./component/PayList";
 
 function App() {
     return (
@@ -23,15 +25,26 @@ function App() {
                 </div>
             </div>
             <div id="content" className="round">
+
+                <div id="firstdiv">
+                    <GuestRecordingForm/>
+                </div>
                 <div id="firstdiv">
                     <WatchRecordingForm/>
-                    <WatchList/>
                 </div>
-                <hr id="firsthr"/>
-                <div id="seconddiv">
-                    <GuestRecordingForm/>
+                <div id="firstdiv">
+                    <SlideRecordingForm/>
+                </div>
+                <div id="firstdiv">
+                    <PayRecordingForm/>
+                </div>
+                <div id="messagediv">
                     <GuestList/>
+                    <WatchList/>
+                    <SlideList/>
+                    <PayList/>
                 </div>
+
             </div>
             <footer className="round">
                 <p>Made by Group 1</p>

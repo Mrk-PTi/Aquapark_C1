@@ -11,5 +11,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class SlideCreateRequestDTO {
     private Integer slideId;
-    private Integer slideExpenses;
+    private Integer slideExpense;
 }

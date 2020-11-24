@@ -27,9 +27,9 @@ class PayList extends React.Component{
     render() {
         return(
             <div>
-                {this.state.pays.map(({payId}, index)=>{
+                {this.state.pays.map(({payId, expense}, index)=>{
                     return(
-                        <PayListItem key={index} payId={payId}/>
+                        <PayListItem key={index} payId={payId} expense={expense}/>
                     );
                 })}
             </div>

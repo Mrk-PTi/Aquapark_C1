@@ -2,16 +2,15 @@ import axios from 'axios';
 import dispatcher from '../dispatcher/Dispatcher';
 import * as actionConstants from '../dispatcher/GuestActionConstants'
 
-export const recordGuest = ({questName, watchId, payId, arrivalDateTime}) =>{
-    axios.post('/Guest/record',
+export const recordGuest = ({guestName, watchId, payId, arrivalDateTime}) =>{
+    axios.post('/guest/record',
         {
-            questName : questName,
+            guestName : guestName,
             watchId : watchId,
             payId : payId,
             arrivalDateTime : arrivalDateTime
         })
         .then(() => {
-            fetchGuests();
             dispatcher.dispatch({action : actionConstants.clearError});
         })
         .catch((err) => {
@@ -19,7 +18,6 @@ export const recordGuest = ({questName, watchId, payId, arrivalDateTime}) =>{
                 action : actionConstants.showError,
                 payload: `${err.response.status}-${err.response.statusText}: ${err.response.data.message}`
             });
-            fetchGuests();
         });
 }
 
@@ -33,10 +31,10 @@ export const fetchGuests = () =>{
     })
 }
 
-export const deleteGuest = (questName) =>{
-    axios.delete(`/guest/${questName}`)
+export const deleteGuest = ({guestName}) =>{
+    axios.delete(`/guest/${guestName}`)
         .then(() => {
-            fetchGuests();
+
             dispatcher.dispatch({action : actionConstants.clearError});
         })
         .catch((err) => {
@@ -44,6 +42,6 @@ export const deleteGuest = (questName) =>{
                 action : actionConstants.showError,
                 payload: `${err.response.status}-${err.response.statusText}: ${err.response.data.message}`
             });
-            fetchGuests();
+
         });
 }
