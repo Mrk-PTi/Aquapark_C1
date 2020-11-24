@@ -4,6 +4,8 @@ import hu.uni.eku.afpc1.controller.dto.SlideDTO;
 import hu.uni.eku.afpc1.controller.dto.SlideCreateRequestDTO;
 import hu.uni.eku.afpc1.model.Slide;
 import hu.uni.eku.afpc1.service.SlideService;
+import hu.uni.eku.afpc1.service.WatchService;
+import hu.uni.eku.afpc1.service.exceptions.NotFoundException;
 import hu.uni.eku.afpc1.service.exceptions.SlideAlreadyExistsException;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -54,6 +56,16 @@ public class SlideController {
                         .slideExpense(model.getSlideExpense())
                         .build()
         ).collect(Collectors.toList());
+    }
+
+    @DeleteMapping(value = {"/{slideId}"})
+    @ApiOperation(value = "Delete a slide")
+    public void delete(@PathVariable Integer slideId) {
+        try {
+            service.delete(slideId);
+        } catch (NotFoundException e) {
+            throw new ResponseStatusException(HttpStatus.CONFLICT, e.getMessage());
+        }
     }
 
 }

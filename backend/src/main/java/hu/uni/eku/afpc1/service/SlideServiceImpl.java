@@ -2,6 +2,7 @@ package hu.uni.eku.afpc1.service;
 
 import hu.uni.eku.afpc1.dao.SlideDao;
 import hu.uni.eku.afpc1.model.Slide;
+import hu.uni.eku.afpc1.service.exceptions.NotFoundException;
 import hu.uni.eku.afpc1.service.exceptions.SlideAlreadyExistsException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -35,5 +36,10 @@ public class SlideServiceImpl implements SlideService {
     @Override
     public Collection<Slide> readAll() {
         return dao.readAll();
+    }
+
+    @Override
+    public void delete(Integer slideId) throws NotFoundException {
+        dao.delete(slideId);
     }
 }
