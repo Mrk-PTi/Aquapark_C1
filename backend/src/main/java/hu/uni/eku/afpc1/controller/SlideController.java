@@ -34,11 +34,11 @@ public class SlideController {
             @RequestBody
                     SlideCreateRequestDTO request
     ){
-        log.info("Recording of Slide ({},{})",request.getSlideId(), request.getSlideExpenses());
+        log.info("Recording of Slide ({},{})",request.getSlideId(), request.getSlideExpense());
         try {
-            service.record(new Slide(request.getSlideId(), request.getSlideExpenses()));
+            service.record(new Slide(request.getSlideId(), request.getSlideExpense()));
         } catch (SlideAlreadyExistsException e) {
-            log.info("Slide ({},{}) is already exists! Message: {}", request.getSlideId(), request.getSlideExpenses(), e.getMessage());
+            log.info("Slide ({},{}) is already exists! Message: {}", request.getSlideId(), request.getSlideExpense(), e.getMessage());
             throw new ResponseStatusException(
                     HttpStatus.CONFLICT,
                     e.getMessage()
