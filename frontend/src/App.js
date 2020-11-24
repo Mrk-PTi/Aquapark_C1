@@ -12,9 +12,11 @@ import PayRecordingForm from "./component/PayRecordingForm";
 import PayList from "./component/PayList";
 
 function App() {
+    function refreshPage() {
+        window.location.reload(false);
+    }
     return (
         <div className={["App","container"]}>
-
             <video src={bg} autoPlay="true" loop="true" muted="true"/>
             <div className="header">
                 <a href="#default" className="logo">Aquapark</a>
@@ -25,7 +27,7 @@ function App() {
                 </div>
             </div>
             <div id="content" className="round">
-
+                <button id="refresh" onClick={()=> refreshPage()}>↺</button>
                 <div id="firstdiv">
                     <GuestRecordingForm/>
                 </div>
