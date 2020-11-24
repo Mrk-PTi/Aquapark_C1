@@ -49,14 +49,13 @@ margin-top:200px;
     margin:20px;
 }
 #messagediv{
+
     height:220px;
     width:75%;
     float:right;
 background-color:black;
-    opacity:60%;
-
+    opacity:80%;
 }
-
 
 .header {
     position: fixed;
