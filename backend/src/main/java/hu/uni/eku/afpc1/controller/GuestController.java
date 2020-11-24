@@ -5,6 +5,7 @@ import hu.uni.eku.afpc1.controller.dto.GuestCreateRequestDTO;
 import hu.uni.eku.afpc1.model.Guest;
 import hu.uni.eku.afpc1.service.GuestService;
 import hu.uni.eku.afpc1.service.exceptions.GuestAlreadyExistsException;
+import hu.uni.eku.afpc1.service.exceptions.NotFoundException;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -57,6 +58,16 @@ public class GuestController {
                         .arrivalDateTime(model.getArrivalDateTime())
                         .build()
         ).collect(Collectors.toList());
+    }
+
+    @DeleteMapping(value = {"/{guestName}"})
+    @ApiOperation(value = "Delete a Guest")
+    public void delete(@PathVariable String guestName) {
+        try {
+            service.delete(guestName);
+        } catch (NotFoundException e) {
+            throw new ResponseStatusException(HttpStatus.CONFLICT, e.getMessage());
+        }
     }
 
 }

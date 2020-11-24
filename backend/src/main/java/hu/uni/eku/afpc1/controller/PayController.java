@@ -4,6 +4,7 @@ import hu.uni.eku.afpc1.controller.dto.PayDTO;
 import hu.uni.eku.afpc1.controller.dto.PayRequestDTO;
 import hu.uni.eku.afpc1.model.Pay;
 import hu.uni.eku.afpc1.service.PayService;
+import hu.uni.eku.afpc1.service.exceptions.NotFoundException;
 import hu.uni.eku.afpc1.service.exceptions.PayAlreadyExistsException;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -54,6 +55,16 @@ public class PayController {
                         .expense(model.getExpense())
                 .build()
         ).collect(Collectors.toList());
+    }
+
+    @DeleteMapping(value = {"/{payId}"})
+    @ApiOperation(value = "Delete a Payment")
+    public void delete(@PathVariable Integer payId) {
+        try {
+            service.delete(payId);
+        } catch (NotFoundException e) {
+            throw new ResponseStatusException(HttpStatus.CONFLICT, e.getMessage());
+        }
     }
 
 }
