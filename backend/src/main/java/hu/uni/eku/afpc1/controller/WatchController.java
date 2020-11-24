@@ -21,7 +21,7 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping(value = "/Watch")
 @RequiredArgsConstructor
-@Api(tags = "Watches")
+@Api(tags = "Watch")
 @Slf4j
 public class WatchController {
 

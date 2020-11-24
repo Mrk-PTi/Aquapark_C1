@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping(value = "/Slide")
 @RequiredArgsConstructor
-@Api(tags = "Slides")
+@Api(tags = "Slide")
 @Slf4j
 public class SlideController {
 
