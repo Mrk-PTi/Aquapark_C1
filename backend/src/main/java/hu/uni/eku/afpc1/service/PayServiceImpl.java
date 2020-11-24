@@ -2,6 +2,7 @@ package hu.uni.eku.afpc1.service;
 
 import hu.uni.eku.afpc1.dao.PayDao;
 import hu.uni.eku.afpc1.model.Pay;
+import hu.uni.eku.afpc1.service.exceptions.NotFoundException;
 import hu.uni.eku.afpc1.service.exceptions.PayAlreadyExistsException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -20,8 +21,7 @@ public class PayServiceImpl implements PayService {
     public void record(Pay Pay) throws PayAlreadyExistsException {
         final boolean isAlreadyRecorded = dao.readAll()
                 .stream()
-                .anyMatch( p -> p.getPayId() == Pay.getPayId()
-                && p.getExpense() == Pay.getExpense());
+                .anyMatch( p -> p.getPayId() == Pay.getPayId());
         if(isAlreadyRecorded){
             log.info("Pay {} is already recorded!", Pay);
             throw new PayAlreadyExistsException(String.format("Pay (%s) already exists!", Pay.toString()));
@@ -33,5 +33,10 @@ public class PayServiceImpl implements PayService {
     @Override
     public Collection<Pay> readAll() {
         return dao.readAll();
+    }
+
+    @Override
+    public void delete(Integer payId) throws NotFoundException {
+        dao.delete(payId);
     }
 }
