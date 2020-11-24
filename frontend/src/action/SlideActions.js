@@ -19,9 +19,9 @@ export const recordSlide = ({slideId, slideExpense}) =>{
         });
 }
 
-export const fetchSlides = () =>{
+export const fetchPays = () =>{
 
-    axios.get('/Slide/').then((resp)=>{
+    axios.get('/Pay/').then((resp)=>{
         dispatcher.dispatch({
             action : actionConstants.refresh,
             payload: resp.data
@@ -29,8 +29,8 @@ export const fetchSlides = () =>{
     })
 }
 
-export const deleteSlide = (slideId) =>{
-    axios.delete(`/Slide/${slideId}`)
+export const deletePay = (payId) =>{
+    axios.delete(`/Pay/${payId}`)
         .then(() => {
 
             dispatcher.dispatch({action : actionConstants.clearError});

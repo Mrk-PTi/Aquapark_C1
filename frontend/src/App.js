@@ -28,22 +28,23 @@ function App() {
 
                 <div id="firstdiv">
                     <GuestRecordingForm/>
-                    <GuestList/>
                 </div>
                 <div id="firstdiv">
                     <WatchRecordingForm/>
-                    <WatchList/>
                 </div>
                 <div id="firstdiv">
                     <SlideRecordingForm/>
-                    <SlideList/>
                 </div>
                 <div id="firstdiv">
                     <PayRecordingForm/>
-                    <PayList/>
                 </div>
                 <div id="messagediv">
+                    <GuestList/>
+                    <WatchList/>
+                    <SlideList/>
+                    <PayList/>
                 </div>
+
             </div>
             <footer className="round">
                 <p>Made by Group 1</p>

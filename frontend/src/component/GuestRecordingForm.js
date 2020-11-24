@@ -26,13 +26,13 @@ class GuestRecordingForm extends React.Component{
                 <label htmlFor={"guestName"} >Guest Name</label>
                 <input type={"text"} id={"guestName"} name={"guestName"} value={this.state.guestName} onChange={this.formOnChange}/>
                 <br/>
-                <label htmlFor={"watchId"} >Watch Id</label>
+                <label htmlFor={"payId"} >Watch Id</label>
                 <input type={"number"} id={"watchId"} name={"watchId"} value={this.state.watchId} onChange={this.formOnChange}/>
                 <br/>
                 <label htmlFor={"payId"} >Pay Id</label>
                 <input type={"number"} id={"payId"} name={"payId"} value={this.state.payId} onChange={this.formOnChange}/>
                 <br/>
-                <label htmlFor={"arrivalDateTime"} >Arrival Time</label>
+                <label htmlFor={"arrivalDateTime"} >arrivalDate</label>
                 <input type={"datetime-local"} id={"arrivalDateTime"} name={"arrivalDateTime"} value={this.state.arrivalDateTime} onChange={this.formOnChange}/>
                 <br/>
                 <button onClick={()=> actions.recordGuest(this.state)}>Submit</button>
