@@ -31,7 +31,7 @@ export const fetchGuests = () =>{
     })
 }
 
-export const deleteGuest = (guestName) =>{
+export const deleteGuest = ({guestName}) =>{
     axios.delete(`/guest/${guestName}`)
         .then(() => {
 

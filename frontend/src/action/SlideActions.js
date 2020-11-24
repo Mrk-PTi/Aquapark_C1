@@ -29,7 +29,7 @@ export const fetchSlides = () =>{
     })
 }
 
-export const deleteSlide = (slideId) =>{
+export const deleteSlide = ({slideId}) =>{
     axios.delete(`/Slide/${slideId}`)
         .then(() => {
 

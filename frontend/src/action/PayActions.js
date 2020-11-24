@@ -29,7 +29,7 @@ export const fetchPays = () =>{
     })
 }
 
-export const deletePay = (payId) =>{
+export const deletePay = ({payId}) =>{
     axios.delete(`/Pay/${payId}`)
         .then(() => {
 

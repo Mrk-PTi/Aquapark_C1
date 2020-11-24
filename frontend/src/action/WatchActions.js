@@ -28,7 +28,7 @@ export const fetchWatches = () =>{
     })
 }
 
-export const deleteWatch = (watchId) =>{
+export const deleteWatch = ({watchId}) =>{
     axios.delete(`/Watch/${watchId}`)
         .then(() => {
 
