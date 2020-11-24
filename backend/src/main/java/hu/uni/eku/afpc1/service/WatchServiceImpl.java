@@ -2,6 +2,7 @@ package hu.uni.eku.afpc1.service;
 
 import hu.uni.eku.afpc1.dao.WatchDao;
 import hu.uni.eku.afpc1.model.Watch;
+import hu.uni.eku.afpc1.service.exceptions.NotFoundException;
 import hu.uni.eku.afpc1.service.exceptions.WatchAlreadyExistsException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -32,5 +33,10 @@ public class WatchServiceImpl implements WatchService {
     @Override
     public Collection<Watch> readAll() {
         return dao.readAll();
+    }
+
+    @Override
+    public void delete(Integer watchId) throws NotFoundException {
+        dao.delete(watchId);
     }
 }
