@@ -56,7 +56,12 @@ margin-top:200px;
 background-color:#f1f1f1;
     opacity:80%;
 }
-
+#refresh{
+    float: right;
+    position: fixed;
+    right: 6%;
+    top: 21%;
+}
 .header {
     position: fixed;
     color:#f1f1f1;
