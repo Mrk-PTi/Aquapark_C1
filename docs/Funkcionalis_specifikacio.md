@@ -16,4 +16,14 @@
 - Ezen adatok alapján statisztikát készítenek az aquapark forgalmáról és a csúszdák kihasználtságáról.
 
 - Ha egy vendég záróra előtt távozik, az óráját lenullázhatjuk és újra kiadhatjuk.
+## Jelenlegi helyzet
+- Ennek a fejezetnek a feladata kifejteni, hogy miért van szükség az alkalmazásunkra. Érdemes minél lényegretörőbbnek lenni benne, minél több pontban ecsetelve a szükséget.
+
+- Az aquaparknak szüksége van egy átfogó rendszerre ami korszerűsíti a jelenlegi rendszert, átláthatóbbá és értelmezhetőbbé teszi a vendégek igényeit és visszakövethetőbbé a pénzösszegek befolyását.
+
+- A jelenlegi megoldás túl lassú ahhoz, hogy megfelelően kielégítse a vendégek igényeit. Ráadásul az alkalmazottaknak kevesebb ideje marad egyéb teendőikre.
+
+- A befolyó összegek nyomonkövetése jelenlegi formájában nehéz. Időigényes visszakövetni ki melyik csúszdát mikor használta.
+
+- Minden csúszdánál állnia kell egy alkalmazottnak, ezért sok embert kell felvennie az aquaparknak. 
 
