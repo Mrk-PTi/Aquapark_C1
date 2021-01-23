@@ -53,3 +53,6 @@
 
 - Fizetett összegek megjelenítése.
 
+## Igényelt üzleti folyamatok
+- A vezetőség kérésére a recepciós munkáját könnyítjük meg azzal hogy lekérheti az vendégek adatait.
+
