@@ -67,3 +67,7 @@
 
 - Navigációs menü : Navigációs menü létrehozása, ahol a kezdőlapra kattintva a kezdőlap jelenik meg.
 
+## Fogalomtár
+- Számla : fizetésről bizonylat.
+
+- Óra : azonosítóval ellátott eszköz, amelyet a vendégeknek minden csúszás után használni kell.
