@@ -7,3 +7,11 @@
 - A recepciós egy navigációs menünk keresztül kezeli a felületet.
 
 - Fontos, hogy a recepciós könnyen el tudjon igazodni a felületeken ezért minimalista felhasználói felületet kap a program.
+
+## Projektterv
+- Ütemterv:
+  - Követelmény specifikáció
+  - Funkcionális specifikáció
+  - Rendszerterv
+  - Adatmodell megtervezése
+  - Adatbázis megvalósítása a szerveren
