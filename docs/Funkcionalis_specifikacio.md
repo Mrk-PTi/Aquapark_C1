@@ -7,10 +7,10 @@
 - Az alkalmazást az aquapark alkalmazottai kezelik. Belépéskor minden vendég kap egy órát, amit használnia kell minden csúszás után. Távozáskor az óráról leolvasottak alapján kap számlát.
 
 - A dolgozók képesek az adatbázisból kiolvasni :
-- Mikor érkezett a vendég
-- Mely csúszdákat használta és hányszor
-- Mikor távozott
-- Mennyit fizetett
+ - Mikor érkezett a vendég
+ - Mely csúszdákat használta és hányszor
+ - Mikor távozott
+ - Mennyit fizetett
 - Milyen azonosítójú óra volt nála
 
 - Ezen adatok alapján statisztikát készítenek az aquapark forgalmáról és a csúszdák kihasználtságáról.
