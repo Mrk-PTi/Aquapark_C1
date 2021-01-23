@@ -56,3 +56,14 @@
 ## Igényelt üzleti folyamatok
 - A vezetőség kérésére a recepciós munkáját könnyítjük meg azzal hogy lekérheti az vendégek adatait.
 
+## Követelménylista
+- A programozás szempontjából talán a legfontosabb része a dokumentumnak. Itt kell leírni azt, hogy milyen funkciókkal kell rendelkeznie a programunknak, ezeknek milyen al-funkciói vannak.
+
+- Hozzáadás : új vendég regisztrálása a rendszerbe, beleértve érkezésének idejét, valamint hogy mely csúszdákat használta hányszor és mennyit fizetett távozásaskor.
+
+- Törlés : vendég minden adatának kitörlése, ha azokra már nincs szükség.
+
+- Listázás : segítség a statisztikák elkészítéséhez, minden vendég minden adata látható legyen.
+
+- Navigációs menü : Navigációs menü létrehozása, ahol a kezdőlapra kattintva a kezdőlap jelenik meg.
+
