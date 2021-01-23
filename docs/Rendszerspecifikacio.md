@@ -25,4 +25,15 @@
   16GB Ram
 
   Opera 73.0.3856.329 (64bit)
+  
+  ## Kockázatmenedzsment
+  - Betegség (magas): a projekt elkészülését késleltetheti, ha egy csapattag váratlanul megbetegedik. Ennek következtében nem tud megfelelő hatásfokkal, vagy egyáltalán dolgozni.
+  
+  - Számítógép meghibásodása (magas): előfordulhat, hogy egy csapattag számítógépe ismeretlen okokból meghibásodhat. Ebből kifolyólag nem tudjuk használni meghatározatlan ideig.
+  
+  - Adatveszteség (magas): az adatveszteség nagy bajt okozhat a csapatnak. Ha nem készítünk biztonsági mentést, rengetek plusz munkát okozunk magunknak.
+  
+  - Konfliktus(közepes/alacsony): a fejlesztők közt lehetnek nézeteltérések. Ilyen helyzetben talán nem hajlandók együtt dolgozni, ami nagy időveszteséget jelent.
+
+
 
