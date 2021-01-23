@@ -1,10 +1,10 @@
 # Funkcionális specifikáció
 ## Áttekintés
--Ebben a fejezetben röviden ismertetem a projektünk egészét. Milyen technológiákat szeretnénk alkalmazni, hogyan fog működni az alkalmazásunk.
+- Ebben a fejezetben röviden ismertetem a projektünk egészét. Milyen technológiákat szeretnénk alkalmazni, hogyan fog működni az alkalmazásunk.
 
--A fejlesztés célja egy vizuálisan részletes, és átlátható web alkalmazás készítése, amely képes nyílvántartani egy aquaparkban a csúszdák használatát, és megjeleníteni, egy vendég mikor érkezett és távozott
+- A fejlesztés célja egy vizuálisan részletes, és átlátható web alkalmazás készítése, amely képes nyílvántartani egy aquaparkban a csúszdák használatát, és megjeleníteni, egy vendég mikor érkezett és távozott
 
--Az alkalmazást az aquapark alkalmazottai kezelik. Belépéskor minden vendég kap egy órát, amit használnia kell minden csúszás után. Távozáskor az óráról leolvasottak alapján kap számlát.
+- Az alkalmazást az aquapark alkalmazottai kezelik. Belépéskor minden vendég kap egy órát, amit használnia kell minden csúszás után. Távozáskor az óráról leolvasottak alapján kap számlát.
 
 - A dolgozók képesek az adatbázisból kiolvasni :
 - Mikor érkezett a vendég
@@ -45,3 +45,6 @@
 - A recepciós adatokat tud felvinni a rendszerbe és azokat módosítani.
 
 - A recepciós láthatja az adatbázisban lévő adatokat.
+
+## Forgatókönyv
+- A recepciósok tudják kezelni a rendszert, egyszerre egy dolgot tudnak benne csinálni
