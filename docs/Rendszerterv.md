@@ -22,3 +22,13 @@
  - Üzleti folyamatok:
    - Aadatok rendszerbe való bevitele, módosítása.
    - Hozzáférés az adatbázishoz.
+   
+ ## Követelmények
+ - Funkcionális
+    - Webes környezetben futattható legyen.
+    - Vendégek adatainak tárolása, listázása.
+ - Nemfunkcionális
+    - Gyors listázás.
+    - Egyszerű, egyértelmű navigációs felület.
+ - Törvényi előírások, szabványok
+    - GDPR-nek való megfelelés
