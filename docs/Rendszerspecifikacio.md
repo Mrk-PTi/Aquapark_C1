@@ -4,6 +4,7 @@
 # A munka feltételei
 ## Munkakörnyezet
 - A projekt az alábbi munkaállomásokat használja :
+
   Windows 10 pro 64bites
 
   Intel i5 4460 3.40GHz
@@ -13,4 +14,15 @@
   16GB Ram
 
   Google Chrome 87.4280.88 (64bit)
+  
+  
+  Windows 10 pro 64bites
+
+  Intel i7 8700K 4.20GHz
+
+  Gigabyte Nvidia GeForce RTX 3070 8GB
+
+  16GB Ram
+
+  Opera 73.0.3856.329 (64bit)
 
