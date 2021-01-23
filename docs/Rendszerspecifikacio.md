@@ -26,7 +26,7 @@
 
   Opera 73.0.3856.329 (64bit)
   
-  ## Kockázatmenedzsment
+ ## Kockázatmenedzsment
   - Betegség (magas): a projekt elkészülését késleltetheti, ha egy csapattag váratlanul megbetegedik. Ennek következtében nem tud megfelelő hatásfokkal, vagy egyáltalán dolgozni.
   
   - Számítógép meghibásodása (magas): előfordulhat, hogy egy csapattag számítógépe ismeretlen okokból meghibásodhat. Ebből kifolyólag nem tudjuk használni meghatározatlan ideig.
@@ -35,5 +35,7 @@
   
   - Konfliktus(közepes/alacsony): a fejlesztők közt lehetnek nézeteltérések. Ilyen helyzetben talán nem hajlandók együtt dolgozni, ami nagy időveszteséget jelent.
 
+## Meetingek
+- Minden héten hétfőn, 13 órától. 
 
 
