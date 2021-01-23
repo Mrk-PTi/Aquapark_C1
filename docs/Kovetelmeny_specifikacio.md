@@ -32,3 +32,15 @@
 - A befolyó összegek nyomonkövetése jelenlegi formájában nehéz. Időigényes visszakövetni ki melyik csúszdát mikor használta.
 
 - Minden csúszdánál állnia kell egy alkalmazottnak, ezért sok embert kell felvennie az aquaparknak.
+
+## Vágyálomrendszer
+- A vágyálomrendszer azért felelős, hogy kifejtsük benne, mit szeretnénk célul a programunkban a 100%-ban ideális esetben. Ilyen-olyan feature-ök jelenléte, és ideális állapotuk.
+
+- A projekt céla egy olyan termék készítése, ami kielégíti az aquapark számára a felzárkózást a többi konkurens céghez online környezetet biztosítva garantálja az aquapark gördülékeny működését.
+
+- Csökkentse az adminisztráció idejét és költségeit. Megkönnyítse az alkalmazottak munkáját.
+
+- A rendszer tegye követhetőbbé, egyes csúszdákat hányszor használják, melyek a legnépszerűbbek.
+
+- Statisztikákat lehessen készíteni a rendszer adatainak segítségével. 
+
