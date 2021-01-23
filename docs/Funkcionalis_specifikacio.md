@@ -48,3 +48,7 @@
 
 ## Forgatókönyv
 - A recepciósok tudják kezelni a rendszert, egyszerre egy dolgot tudnak benne csinálni
+
+## Fogalomtár
+- Számla : fizetésről bizonylat.
+- Óra : azonosítóval ellátott eszköz, amelyet a vendégeknek minden csúszás után használni kell.
