@@ -37,3 +37,11 @@
 
 - Navigációs menü : Navigációs menü létrehozása, ahol a kezdőlapra kattintva a kezdőlap jelenik meg.
 
+## Használati esetek
+- A recepciós órát ad a vendégnek.
+
+- A vengég használja az órát.
+
+- A recepciós adatokat tud felvinni a rendszerbe és azokat módosítani.
+
+- A recepciós láthatja az adatbázisban lévő adatokat.
