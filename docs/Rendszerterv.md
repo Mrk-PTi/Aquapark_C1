@@ -15,3 +15,10 @@
   - Rendszerterv
   - Adatmodell megtervezése
   - Adatbázis megvalósítása a szerveren
+  
+ ## Üzleti folyamatok
+ - Üzleti szereplők:
+   - Recepciósok, dolgozók
+ - Üzleti folyamatok:
+   - Aadatok rendszerbe való bevitele, módosítása.
+   - Hozzáférés az adatbázishoz.
