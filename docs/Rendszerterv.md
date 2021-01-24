@@ -83,3 +83,11 @@
     - JetBrains IntelliJ IDEA
     
     - Dockstation
+    
+## Architektúrális terv
+
+- Backend
+
+    - A rendszerhez szükség van egy adatbázis szerverre.
+    - A kliensekkel JSON objektumok segítségével kommunikál.
+
