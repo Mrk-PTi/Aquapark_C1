@@ -139,3 +139,9 @@
       - Képesnek kell lennie egy időben kiszolgálni több klienst is.
       
       - Fel kell tudnia tölteni, és le kell tudnia kérdezni az adatbázis adatait.
+      
+## Telepítési terv
+
+- A szoftver webes felületéhez csak egy ajánlott böngésző telepítése szükséges, külön szoftver nem kell hozzá.
+
+- Például: Google Chrome, Firefox, Opera
