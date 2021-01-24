@@ -11,10 +11,16 @@ Beosztás : Fejlesztő
 
 Dátum : 2021.01.01.
 
-|**Sorszám**|**Funkció**|
-**Vizsgálat 
-módja**|**Elvárt
+|**Sorszám**|**Funkció
+leírása**|**Vizsgálat módja\
+eszköze**|**Elvárt
 eredmény**|**Aktuális
-eredmény**|**Megfelelő**|
+eredmény**|**Megfelelőség
+státusza**|
+|:-------|:-------------
+|:--------------------
+|:---------------
+|:----------------
+|:------------------|
 
 
