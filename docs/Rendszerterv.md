@@ -100,3 +100,42 @@
     
     - Képes lesz felhasználni a Backend részen futó szolgáltatás metódusait, ezáltal tud felvinni és lekérdezni adatokat az adatbázisból.
 
+## Tesztterv
+
+- Tesztelési eljárások
+
+    - Unit teszt
+
+      - Ahol csak lehetséges, szükséges már a fejlesztési idő alatt is tesztelni, hogy a metódusok megfelelően működnek-e.
+      
+      - Ezért a metódusok megfelelő működésének biztosítására mindegyikhez írni kell Unit teszteket, a minél nagyobb kódlefedettséget szem előtt tartva.
+      
+      - A metódusok akkor vannak kész, ha a tesztesetek hiba nélkül lefutnak rajtuk.
+      
+    - Alfa teszt
+
+      - A tesztet a fejlesztők végzik.
+      
+      - A teszt elsődleges célja: az eddig meglévő funkciók különböző böngészőkkel való kompatibilitásának tesztelése.
+      
+      - Az eljárás sikeres, ha különböző böngészőkben megfelelően működnek a különböző funkciók.
+      
+      - A teszt időtartama x idő.
+      
+    - Béta teszt
+
+      - A tesztet a fejlesztők végzik.
+      
+      - Tesztelendő böngészők: Opera, Firefox, Google Chrome.
+      
+      - A teszt időtartama x idő.
+      
+- Tesztelendő funkciók
+
+    - Backend
+    
+      - Képesnek kell lennie csatlakozni webes klienshez.
+      
+      - Képesnek kell lennie egy időben kiszolgálni több klienst is.
+      
+      - Fel kell tudnia tölteni, és le kell tudnia kérdezni az adatbázis adatait.
