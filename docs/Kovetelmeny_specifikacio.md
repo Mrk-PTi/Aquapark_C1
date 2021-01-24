@@ -61,11 +61,19 @@
 
 - Hozzáadás : új vendég regisztrálása a rendszerbe, beleértve érkezésének idejét, valamint hogy mely csúszdákat használta hányszor és mennyit fizetett távozásaskor.
 
+  - Kifejtés: Adatok hozzáadása az adatbázishoz
+
 - Törlés : vendég minden adatának kitörlése, ha azokra már nincs szükség.
+
+   - Kifejtés: Adatok törlése az adatbázisból
 
 - Listázás : segítség a statisztikák elkészítéséhez, minden vendég minden adata látható legyen.
 
+   - Kifejtés: Adatok listázása
+
 - Navigációs menü : Navigációs menü létrehozása, ahol a kezdőlapra kattintva a kezdőlap jelenik meg.
+
+   - Kifejtés: Navigációs menü létrehozása, ahol a kezdőlapra kattintva a kezdőlap jelenik meg.
 
 ## Fogalomtár
 - Számla : fizetésről bizonylat.
