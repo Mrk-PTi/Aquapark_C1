@@ -16,7 +16,7 @@ Dátum: 2020.01.01
 | :-------- | :---------------- | :------------------------ | :---------------- | :------------------ | :----------------------- |
 |Általános funkcionális teszt|
 |1.|Vendég hozzáadás|<p>Swagger,</p><p>Google Chrome Böngésző</p>|<p>Adatbázisban új adat jelenik meg</p><p></p>|<p>Adatbázisban új termék jelenik meg</p><p></p>|Megfelelő|
-|2.|Vendég idejének lekérése|<p>Swagger,</p><p>Mozzilla Böngésző</p>|Visszatér az vendég idejével|Visszatér az összes termékkel|Megfelelő|
+|2.|Vendég id-jének lekérése|<p>Swagger,</p><p>Mozzilla Böngésző</p>|Visszatér az vendég id-jével|Visszatér az összes termékkel|Megfelelő|
 |3.|Csúszdahasználat|<p>Swagger,</p><p>Google Chrome Böngésző</p>|Az óra és csúszda id alapján használat, adatbázisba felvétel|Csúszda azonosítása,
  adatbázisba felvétel|Megfelelő|
 |4.|Csúszások lekérése|<p>Swagger,</p><p>Google Chrome Böngésző</p>|Visszatér az összes csúszdahasználattal|Visszatér az összes csúszdahasználattal|Megfelelő|
