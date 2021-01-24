@@ -11,10 +11,15 @@ Beosztás : Fejlesztő
 
 Dátum : 2021.01.01.
 
-|**Sorszám**|**Funkció**|**Vizsgálat 
-módja**|**Elvárt
-eredmény**|**Aktuális
-eredmény**|**Megfelelő**|
+|**Sorszám**|
+**Funkció**|
+**Vizsgálat 
+módja**|
+**Elvárt
+eredmény**|
+**Aktuális
+eredmény**|
+**Megfelelő**|
 |:--------|:-------------
 |:---------------------
 |:-----------------
