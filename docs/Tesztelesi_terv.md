@@ -37,3 +37,19 @@
   5.GET metódus alkalmazása a swagger felületen
   
   6.DELETE metódus alkalmazása a swagger felületen 
+  
+## Frontend
+
+- Szükséges hardware
+
+    - Személyi számítógép
+    
+- Szükséges szoftver
+
+    - Webböngésző
+    
+    - Webstorm
+    
+    - Dockstation
+    
+- Ajánlott operációs rendszer a projekt teszteléséhez: Windows 10
