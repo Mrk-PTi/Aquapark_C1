@@ -53,3 +53,19 @@
     - Dockstation
     
 - Ajánlott operációs rendszer a projekt teszteléséhez: Windows 10
+
+## Lépések
+
+   1.Dockstation elindítás, projekt betöltése, buildelés, start
+   
+   2.Webstorm megnyitása, projekt elindítása
+   
+   3.Webböngésző megnyitása, swagger megnyitása
+   
+   4.Adat mezők kitöltése, Submit gomb megnyomása
+   
+   5.Oldal frissítése, Lista gomb lenyomása
+   
+   6.ID beállítása, törlés gomb megnyomása
+   
+   7.Ismétlés a billing szekciónál
