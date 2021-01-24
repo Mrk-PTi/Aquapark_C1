@@ -1,7 +1,7 @@
 | Rendszer megnevezése :| Aquapark |
 | :---:   |  :----: |
-|**Tesztelés időtartama**|5 munkanap|
-|**Tesztelés erőforrás szükséglete**| Szerver, csúszda használat szimuláció|
+|**Tesztelés időtartama:**|5 munkanap|
+|**Tesztelés erőforrás szükséglete:**| Szerver, csúszda használat szimuláció|
 
 Átvételi eljárásban részt vesz :
 
@@ -15,3 +15,9 @@ Dátum : 2021.01.01.
 módja**|**Elvárt
 eredmény**|**Aktuális
 eredmény**|**Megfelelő**|
+|:--------|:-------------
+|:---------------------
+|:-----------------
+|:------------------
+|:--------------------|
+
