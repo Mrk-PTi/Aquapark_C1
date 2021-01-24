@@ -8,15 +8,15 @@
 
 - A dolgozók képesek az adatbázisból kiolvasni :
 
-- Mikor érkezett a vendég
+    - Mikor érkezett a vendég
 
-- Mely csúszdákat használta és hányszor
+    - Mely csúszdákat használta és hányszor
 
-- Mikor távozott
+    - Mikor távozott
 
-- Mennyit fizetett
+    - Mennyit fizetett
 
-- Milyen azonosítójú óra volt nála
+    - Milyen azonosítójú óra volt nála
 
 - Ezen adatok alapján statisztikát készítenek az aquapark forgalmáról és a csúszdák kihasználtságáról.
 
