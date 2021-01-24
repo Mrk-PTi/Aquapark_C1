@@ -11,34 +11,61 @@
 ## Projektterv
 - Ütemterv:
   - Követelmény specifikáció
+ 
   - Funkcionális specifikáció
+  
   - Rendszerterv
+  
   - Adatmodell megtervezése
+  
   - Adatbázis megvalósítása a szerveren
   
  ## Üzleti folyamatok
  - Üzleti szereplők:
+ 
    - Recepciósok, dolgozók
+   
  - Üzleti folyamatok:
+ 
    - Adatok rendszerbe való bevitele, módosítása.
+   
    - Hozzáférés az adatbázishoz.
    
  ## Követelmények
  - Funkcionális
+ 
     - Webes környezetben futattható legyen.
+    
     - Vendégek adatainak tárolása, listázása.
+    
  - Nemfunkcionális
+ 
     - Gyors listázás.
+    
     - Egyszerű, egyértelmű navigációs felület.
+    
  - Törvényi előírások, szabványok
+ 
     - GDPR-nek való megfelelés
 
 ## Funkcionális terv
 - Rendszerszereplők
+
     - Recepciós
+    
 - Rendszerhasználati esetek és lefutásaik
+
     - Recepciós
-      - Teljes hozzáférése van a rendszerhez
+    
+      - Teljes hozzáférése van a 
+      
       - Adatokat látja és változtathat rajta
+      
       - Adatok hozzáadására, törlésére van lehetőségük
+
+- Menü hierarchia
+
+    - Kezdőlap
+      - Vendég adatai
+      - Fizetés adatok
 
