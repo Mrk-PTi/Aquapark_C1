@@ -20,7 +20,7 @@
  - Üzleti szereplők:
    - Recepciósok, dolgozók
  - Üzleti folyamatok:
-   - Aadatok rendszerbe való bevitele, módosítása.
+   - Adatok rendszerbe való bevitele, módosítása.
    - Hozzáférés az adatbázishoz.
    
  ## Követelmények
@@ -32,3 +32,13 @@
     - Egyszerű, egyértelmű navigációs felület.
  - Törvényi előírások, szabványok
     - GDPR-nek való megfelelés
+
+## Funkcionális terv
+- Rendszerszereplők
+    - Recepciós
+- Rendszerhasználati esetek és lefutásaik
+    - Recepciós
+      - Teljes hozzáférése van a rendszerhez
+      - Adatokat látja és változtathat rajta
+      - Adatok hozzáadására, törlésére van lehetőségük
+
