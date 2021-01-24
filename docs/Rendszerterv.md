@@ -69,3 +69,17 @@
       - Vendég adatai
       - Fizetés adatok
 
+## Fizikai környezet
+- Az alkalmazás webplatformra készül.
+
+- Nincsenek megvásárolt komponenseink.
+
+- Fejlesztői eszközök:
+
+    - Sublime Text
+    
+    - JetBrains Webstorm
+    
+    - JetBrains IntelliJ IDEA
+    
+    - Dockstation
