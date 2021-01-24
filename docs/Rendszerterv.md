@@ -84,10 +84,19 @@
     
     - Dockstation
     
-## Architektúrális terv
+## Architekturális terv
 
 - Backend
 
     - A rendszerhez szükség van egy adatbázis szerverre.
+    
     - A kliensekkel JSON objektumok segítségével kommunikál.
+    
+- Frontend
+
+    - A Webes felület főként HTML, CSS, és Javascript segítségével fog készülni.
+    
+    - Ezeket a technológiákat amennyire csak lehet külön fájlokba írva készítjük, és úgy fogjuk egymáshoz csatolni a jobb átláthatóság, könnyebb változtathatóság, és könnyebb bővítés érdekében.
+    
+    - Képes lesz felhasználni a Backend részen futó szolgáltatás metódusait, ezáltal tud felvinni és lekérdezni adatokat az adatbázisból.
 
