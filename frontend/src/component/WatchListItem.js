@@ -1,9 +1,12 @@
-import React from 'react';
+import React from "react";
 
-function WatchListItem({watchId}){
-    return (
-        <span>({watchId})</span>
-    );
+function WatchListItem({ watchId }) {
+  return (
+    <span>
+      Watch id: {watchId}
+      {"; "}
+    </span>
+  );
 }
 
 export default WatchListItem;
