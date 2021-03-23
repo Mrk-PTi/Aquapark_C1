@@ -6,6 +6,7 @@ body {
   background-image: url("image/pexels-pixabay-533923.jpg");
   overflow: hidden;
 }
+
 video {
   position: fixed;
   right: 0;
@@ -13,9 +14,11 @@ video {
   min-width: 100%;
   min-height: 100%;
 }
+
 h1 {
   padding: 10px;
 }
+
 a:link {
   text-decoration: none;
 }
@@ -31,6 +34,7 @@ a:hover {
 a:active {
   text-decoration: none;
 }
+
 #content {
   position: fixed;
   text-align: center;
@@ -47,19 +51,25 @@ a:active {
   width: 22.5%;
   margin: 20px;
 }
+
 #messagediv {
   height: 220px;
   width: 75%;
   float: right;
   background-color: #f1f1f1;
   opacity: 80%;
+  border: 2px solid black;
+  border-radius: 12px;
+  overflow: auto;
 }
+
 #refresh {
   float: right;
   position: fixed;
   right: 6%;
   top: 21%;
 }
+
 .header {
   position: fixed;
   color: #f1f1f1;
@@ -121,10 +131,12 @@ input[type="number"] {
   border-radius: 24px;
   background: aquamarine;
 }
+
 input[type="text"] {
   border-radius: 24px;
   background: aquamarine;
 }
+
 input[type="datetime-local"] {
   border-radius: 24px;
   background: aquamarine;
