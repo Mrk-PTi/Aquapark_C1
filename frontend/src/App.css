@@ -35,7 +35,7 @@ a:active {
   text-decoration: none;
 }
 
-#content {
+.content {
   position: fixed;
   text-align: center;
   width: 90%;
