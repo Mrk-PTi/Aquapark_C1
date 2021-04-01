@@ -5,6 +5,7 @@ import About from "./component/About/About";
 import Events from "./component/Events/Events";
 import Navbar from "./component/Navbar/Navbar";
 import Home from "./component/Home/Home";
+import Footer from "./component/Footer/Footer";
 import bg from "./video/bg.mp4";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
@@ -25,10 +26,7 @@ function App() {
             <Events />
           </Route>
         </Switch>
-        <footer className="round">
-          <p>Made by Group 1</p>
-          <p>All rights reserved.</p>
-        </footer>
+        <Footer />
       </Router>
     </div>
   );
