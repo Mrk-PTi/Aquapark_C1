@@ -2,6 +2,7 @@ import React from "react";
 import "./App.scss";
 import "./App.css";
 import About from "./component/About/About";
+import Events from "./component/Events/Events";
 import WatchRecordingForm from "./component/WatchRecordingForm";
 import WatchList from "./component/WatchList";
 import SlideRecordingForm from "./component/SlideRecordingForm";
@@ -25,7 +26,7 @@ function App() {
           <Link to="/">Aquapark</Link>
 
           <div className="header-right">
-            <a href="#contact">Contact</a>
+            <Link to="/events">Events</Link>
             <Link to="/about">About</Link>
           </div>
         </div>
@@ -61,6 +62,9 @@ function App() {
           </Route>
           <Route path="/about">
             <About />
+          </Route>
+          <Route path="/events">
+            <Events />
           </Route>
         </Switch>
       </Router>
